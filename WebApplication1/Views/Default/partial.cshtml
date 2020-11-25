@@ -1,0 +1,10 @@
+﻿@model WebApplication1.Models.urunler
+
+@using WebApplication1.Controllers;
+
+<img class="modal-content" id="img01" src="~/Content/img/@Model.foto">
+<div id="caption">
+    @Model.baslik
+@Html.ActionLink("Detay", "UrunDetay", new { id = Model.id, baslik = Seo.AdresDuzenle(Model.baslik) }, new { @class = "btn btn-info" })
+</div>
+

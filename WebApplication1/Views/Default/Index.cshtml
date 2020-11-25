@@ -1,0 +1,587 @@
+﻿@model List<WebApplication1.Models.urunler>
+@using WebApplication1.Controllers
+@{
+    ViewBag.Title = "MainPage";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div id="qodef-page-outer">
+    <div id="qodef-page-inner" class="qodef-content-full-width">
+        <main id="qodef-page-content" class="qodef-grid qodef-layout--template ">
+            <div class="qodef-grid-inner clear">
+                <div class="qodef-grid-item qodef-page-content-section qodef-col--12">
+                    <div data-elementor-type="wp-page" data-elementor-id="13" class="elementor elementor-13" data-elementor-settings="[]">
+                        <div class="elementor-inner">
+                            <div class="elementor-section-wrap">
+                                <section class="elementor-element elementor-element-d2a37ee elementor-section-full_width elementor-section-height-default elementor-section-height-default qodef-elementor-content-no elementor-section elementor-top-section" data-id="d2a37ee" data-element_type="section">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-row">
+                                            <div class="elementor-element elementor-element-ce9829d elementor-column elementor-col-100 elementor-top-column" data-id="ce9829d" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-83dddf7 elementor-widget elementor-widget-slider_revolution" data-id="83dddf7" data-element_type="widget" data-widget_type="slider_revolution.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="wp-block-themepunch-revslider">
+                                                                    <p class="rs-p-wp-fix"></p>
+                                                                    <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="background:#f9f3eb;padding:0;">
+
+                                                                        <!-- Slider -->
+                                                                        <rs-module id="rev_slider_1_1" style="" data-version="6.2.12">
+                                                                            <rs-slides>
+
+                                                                                <!-- Slides-->
+                                                                                @foreach (var urun in Model)
+                                                                                {
+                                                                                    <rs-slide data-key="rs-@urun.id" data-title="@urun.baslik" data-thumb="~/Content/img/@urun.foto" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
+                                                                                        <img src="~/Content/img/@urun.foto" alt="a" title="@urun.ustbaslik" width="1920" height="870" data-bg="p:6% 64%;" class="rev-slidebg" data-no-retina>
+
+                                                                                    </rs-slide>
+                                                                                }
+
+                                                                            </rs-slides>
+                                                                        </rs-module>
+
+
+                                                                        <script type="text/javascript">
+                                                                            setREVStartSize({ c: 'rev_slider_1_1', rl: [1920, 1720, 1025, 700], el: [870, 535, 600, 750], gw: [1240, 1024, 778, 480], gh: [870, 535, 600, 750], type: 'standard', justify: '', layout: 'fullscreen', offsetContainer: 'html.no-touchevents #qodef-page-header, html.no-touchevents #qodef-top-area, html.touchevents #qodef-page-mobile-header', offset: '', mh: "0" });
+                                                                            var revapi1,
+                                                                                tpj;
+                                                                            jQuery(function () {
+                                                                                tpj = jQuery;
+                                                                                revapi1 = tpj("#rev_slider_1_1")
+                                                                                if (revapi1 == undefined || revapi1.revolution == undefined) {
+                                                                                    revslider_showDoubleJqueryError("rev_slider_1_1");
+                                                                                } else {
+                                                                                    revapi1.revolution({
+                                                                                        sliderLayout: "fullscreen",
+                                                                                        duration: "5000ms",
+                                                                                        visibilityLevels: "1920,1720,1025,700",
+                                                                                        gridwidth: "1240,1024,778,480",
+                                                                                        gridheight: "870,535,600,750",
+                                                                                        perspective: 600,
+                                                                                        perspectiveType: "local",
+                                                                                        editorheight: "870,535,600,750",
+                                                                                        responsiveLevels: "1920,1720,1025,700",
+                                                                                        fullScreenOffsetContainer: "html.no-touchevents #qodef-page-header, html.no-touchevents #qodef-top-area, html.touchevents #qodef-page-mobile-header",
+                                                                                        progressBar: { disableProgressBar: true },
+                                                                                        navigation: {
+                                                                                            onHoverStop: false,
+                                                                                            touch: {
+                                                                                                touchenabled: true
+                                                                                            },
+                                                                                            arrows: {
+                                                                                                enable: true,
+                                                                                                tmp: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"35\" viewBox=\"23.25 0 10.749 19.997\"><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M33.232 19.181l-9.215-9.215L33.232.75\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M33.232 19.181l-9.215-9.215L33.232.75\"/></svg>",
+                                                                                                style: "konsept-tp-arrows",
+                                                                                                hide_onmobile: true,
+                                                                                                hide_under: "900px",
+                                                                                                left: {
+                                                                                                    h_offset: 30
+                                                                                                },
+                                                                                                right: {
+                                                                                                    h_offset: 30
+                                                                                                }
+                                                                                            },
+                                                                                            bullets: {
+                                                                                                enable: true,
+                                                                                                tmp: "<svg class=\"qodef-svg-circle\"><circle cx=\"50%\" cy=\"50%\" r=\"45%\"></circle></svg>",
+                                                                                                style: "konsept",
+                                                                                                hide_onmobile: true,
+                                                                                                hide_under: "680px",
+                                                                                                v_offset: 35,
+                                                                                                space: ""
+                                                                                            }
+                                                                                        },
+                                                                                        fallbacks: {
+                                                                                            allowHTML5AutoPlayOnAndroid: true
+                                                                                        },
+                                                                                    });
+                                                                                }
+
+                                                                            });
+                                                                        </script>
+                                                                        <script>
+                                                                            var htmlDivCss = unescape(".konsept-tp-arrows.tparrows%3Abefore%20%7B%0A%20%20display%3Anone%7D%0A%0A.konsept-tp-arrows.tparrows%20%7B%0A%20%20display%3A%20flex%3B%0A%20%20background%3A%20none%3B%0A%20%20align-items%3A%20center%3B%0A%20%20justify-content%3A%20center%3B%0A%20%20color%3A%20%23fff%3B%0A%7D%0A%0A.konsept-tp-arrows.tparrows%3Ahover%20%7B%0A%20%20background%3A%20none%20%0A%7D%0A%0A.konsept-tp-arrows.tp-rightarrow%20svg%20%7B%0A%20%20transform%3A%20scaleX%28-1%29%0A%7D%0A%0A.konsept-tp-arrows%20svg%20path%20%7B%0A%20%20stroke-width%3A%20.8px%3B%0A%7D%0A%0A.konsept-tp-arrows%20svg%20path%3Anth-child%281%29%20%7B%0A%09%20stroke-dasharray%3A%2040%3B%0A%09%20stroke-dashoffset%3A%2040%3B%0A%09%20transform%3A%20scaleY%28-1%29%3B%0A%09%20transform-origin%3A%20center%3B%0A%09%20transition%3A%200.6s%20cubic-bezier%280.49%2C%200.48%2C%201%2C%201%29%3B%0A%7D%0A.konsept-tp-arrows%20svg%20path%3Anth-child%282%29%20%7B%0A%09%20stroke-dasharray%3A%2040%3B%0A%09%20stroke-dashoffset%3A%200%3B%0A%09%20transition%3A%200.6s%200.3s%20cubic-bezier%280.49%2C%200.64%2C%201%2C%201%29%3B%0A%7D%0A%0A.konsept-tp-arrows%3Ahover%20svg%20path%3Anth-child%281%29%20%7B%0A%09%20stroke-dashoffset%3A%200%3B%0A%09%20transition%3A%200.6s%200.3s%20cubic-bezier%280.49%2C%200.64%2C%201%2C%201%29%3B%0A%7D%0A.konsept-tp-arrows%3Ahover%20svg%20path%3Anth-child%282%29%20%7B%0A%09%20stroke-dashoffset%3A%2040%3B%0A%09%20transition%3A%200.6s%20cubic-bezier%280.49%2C%200.48%2C%201%2C%201%29%3B%0A%7D%0A.tp-bullet%20%7B%0A%20%20display%3A%20inline-flex%3B%0A%20%20width%3A%2040px%3B%0A%20%20height%3A%2040px%3B%0A%20%20align-items%3A%20center%3B%0A%20%20justify-content%3A%20center%3B%0A%20%20background-color%3A%20transparent%3B%0A%20%20opacity%3A%201%3B%0A%20%20position%3A%20relative%3B%0A%20%20margin%3A%200%204px%3B%0A%7D%0A%09%09%0A.tp-bullet%3Aafter%20%7B%0A%20%20content%3A%20%27%27%3B%0A%20%20display%3A%20block%3B%0A%20%20width%3A%206px%3B%0A%20%20height%3A%206px%3B%0A%20%20transform%3A%20rotate%2845deg%29%3B%0A%20%20background-color%3A%20%23fff%3B%20%20%0A%20%20transition%3A%20background-color%200.3s%20ease%3B%0A%7D%0A%09%0A.tp-bullet.selected%2C%0A.tp-bullet%3Ahover%20%7B%0A%20%20border-color%3A%20%23fff%3B%0A%20%20background-color%3A%20transparent%3B%0A%7D%0A%09%09%0A.tp-bullet.selected%3Aafter%2C%0A.tp-bullet%3Ahover%3Aafter%20%7B%0A%20%20background-color%3A%20%23fff%3B%0A%7D%0A%0A.tp-bullet%20.qodef-svg-circle%20%7B%0A%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20display%3A%20block%3B%0A%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20top%3A%200%3B%0A%20%20%20%20left%3A%200%3B%0A%20%20%20%20z-index%3A%201%3B%0A%20%20%20%20fill%3A%20none%3B%0A%20%20%20%20color%3A%20currentColor%3B%0A%20%20%20%20stroke%3A%20%23fff%3B%0A%20%20%20%20-webkit-transition%3A%20all%20.8s%20cubic-bezier%280.14%2C%200.57%2C%200.14%2C%201.03%29%3B%0A%20%20%20%20-o-transition%3A%20all%20.8s%20cubic-bezier%280.14%2C%200.57%2C%200.14%2C%201.03%29%3B%0A%20%20%20%20transition%3A%20all%20.8s%20cubic-bezier%280.14%2C%200.57%2C%200.14%2C%201.03%29%3B%0A%7D%0A%0A%20.tp-bullet%20.qodef-svg-circle%20circle%20%7B%0A%20%20%20%20stroke-dasharray%3A%20160%3B%0A%20%20%20%20stroke-dashoffset%3A%20160%3B%0A%20%20%20%20stroke-width%3A%201%3B%0A%20%20%20%20-webkit-transition%3A%20all%20.8s%20cubic-bezier%28.45%2C0%2C.14%2C1.03%29%3B%0A%20%20%20%20-o-transition%3A%20all%20.8s%20cubic-bezier%28.45%2C0%2C.14%2C1.03%29%3B%0A%20%20%20%20transition%3A%20all%20.8s%20cubic-bezier%28.45%2C0%2C.14%2C1.03%29%3B%0A%09transform%3A%20rotate%28-145deg%29%3B%0A%09transform-origin%3A%20center%3B%0A%7D%0A%0A.qodef-browser--ms-explorer%20.tp-bullet%20.eltdf-svg-circle%20circle%20%7B%0A%20%20opacity%3A%200%3B%0A%7D%0A%0A.tp-bullet%3Ahover%20.qodef-svg-circle%20circle%2C%0A.tp-bullet.selected%20.qodef-svg-circle%20circle%20%7B%0A%20%20%20%20stroke-dashoffset%3A%2010%3B%0A%20%20%09transform%3A%20rotate%2855deg%29%3B%0A%20%20%20%20-webkit-transition%3A%20all%201s%20cubic-bezier%280.43%2C%200.41%2C%200.36%2C%200.9%29%3B%0A%20%20%20%20-o-transition%3A%20all%201s%20cubic-bezier%280.43%2C%200.41%2C%200.36%2C%200.9%29%3B%0A%20%20%20%20transition%3A%20all%201s%20cubic-bezier%280.43%2C%200.41%2C%200.36%2C%200.9%29%3B%0A%7D%0A%0A.qodef-browser--ms-explorer%20.tp-bullet%3Ahover%20.qodef-svg-circle%20circle%2C%0A.qodef-browser--ms-explorer%20.tp-bullet.selected%20.qodef-svg-circle%20circle%20%7B%0A%20%20opacity%3A%201%3B%0A%7D%0A");
+                                                                            var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+                                                                            if (htmlDiv) {
+                                                                                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+                                                                            } else {
+                                                                                var htmlDiv = document.createElement('div');
+                                                                                htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+                                                                                document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+                                                                            }
+                                                                        </script>
+                                                                        <script>
+                                                                            var htmlDivCss = unescape("%0A%0A%0A%0A%0A%0A");
+                                                                            var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+                                                                            if (htmlDiv) {
+                                                                                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+                                                                            } else {
+                                                                                var htmlDiv = document.createElement('div');
+                                                                                htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+                                                                                document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+                                                                            }
+                                                                        </script>
+                                                                    </rs-module-wrap>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="elementor-element elementor-element-e99bd46 elementor-section-full_width elementor-section-height-default elementor-section-height-default qodef-elementor-content-no elementor-section elementor-top-section" data-id="e99bd46" data-element_type="section">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-row">
+                                            <div class="elementor-element elementor-element-b1ad37c elementor-column elementor-col-100 elementor-top-column" data-id="b1ad37c" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-80dda3b elementor-widget elementor-widget-konsept_core_section_title" data-id="80dda3b" data-element_type="widget" data-widget_type="konsept_core_section_title.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--center ">
+                                                                    <span class="qodef-m-tagline" style="margin-bottom: 10px">Herkesin Seveceği Mobilya Tasarımları</span>
+                                                                    <h2 class="qodef-m-title">
+                                                                        Basit ve Minimal Mobilya modelleriyle sizlere hizmet etmeye devam edeceğiz.
+
+                                                                    </h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                                <section class="elementor-element elementor-element-b1424bb elementor-section-full_width elementor-section-height-default elementor-section-height-default qodef-elementor-content-no elementor-section elementor-top-section" data-id="b1424bb" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-row">
+                                            <div class="elementor-element elementor-element-5bd096b elementor-column elementor-col-100 elementor-top-column" data-id="5bd096b" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-f7fd159 elementor-widget elementor-widget-slider_revolution" data-id="f7fd159" data-element_type="widget" data-widget_type="slider_revolution.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="wp-block-themepunch-revslider">
+                                                                    <p class="rs-p-wp-fix"></p>
+                                                                    <rs-module-wrap id="rev_slider_6_2_wrapper" data-source="gallery" style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+                                                                        <rs-module id="rev_slider_6_2" style="" data-version="6.2.12">
+                                                                            <rs-slides>
+                                                                                <rs-slide data-key="rs-6" data-title="Slide" data-anim="ei:d;eo:d;s:0ms;r:0;t:fade;sl:0;">
+                                                                                    <img src="~/Content/wp-content/plugins/revslider/public/assets/assets/transparent.png" alt="a" title="Home1_rev1" width="1920" height="870" data-bg="c:#9db97b;" class="rev-slidebg" data-no-retina>
+                                                                                    <rs-layer id="slider-6-slide-6-layer-0" data-type="text" data-xy="x:c;xo:248px,177px,70px,0;y:m;yo:-56px,-56px,-74px,-115px;" data-text="w:normal,normal,normal,normal;s:40;l:58;ls:10px,10px,10px,5px;fw:600;a:left,left,left,center;" data-dim="w:auto,auto,auto,403px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:-50;" data-frame_1="e:power1.out;st:1200;sp:400;" data-frame_999="o:0;st:w;" style="z-index:13;font-family:Josefin Sans;text-transform:uppercase;">
+                                                                                        farklı düşün
+                                                                                    </rs-layer><rs-layer id="slider-6-slide-6-layer-3" data-type="text" data-xy="x:c;xo:133px,68px,0,0;y:m;yo:-126px,-127px,-146px,-184px;" data-text="w:normal;" data-vbility="t,t,t,f" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:-50;" data-frame_1="e:power1.out;st:1000;sp:400;" data-frame_999="o:0;st:w;" style="z-index:18;font-family:Roboto;">
+                                                                                        <p class="qodef-shortcode qodef-m  qodef-custom-font  qodef-custom-font-18 qodef-layout--simple" style="color: #FFFFFF;font-family: The Gwathmey;font-size: 55px;line-height: 65px">Inspiration</p>
+                                                                                    </rs-layer>
+
+                                                                                    <rs-layer id="slider-6-slide-6-layer-5" data-type="text" data-xy="x:c;xo:422px,328px,178px,0;y:m;yo:21px,20px,27px,15px;" data-text="w:normal;s:17;l:27;a:left,left,left,center;" data-dim="w:545px,486px,318px,321px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:-50;" data-frame_1="e:power1.out;st:1400;sp:400;" data-frame_999="o:0;st:w;" style="z-index:10;font-family:Open Sans;">
+                                                                                        Farkımızı, farklı mobilya tasarımları ve piyasaya göre daha ucuz modellerle ortaya koyuyoruz
+                                                                                    </rs-layer><rs-layer id="slider-6-slide-6-layer-6" data-type="image" data-xy="x:c;xo:-133px,-160px,-208px,-603px;y:m;yo:1px,1px,2px,1px;" data-text="w:normal;" data-dim="w:408px,330px,291px,291px;h:521px,421px,372px,372px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:50;" data-frame_1="e:power1.inOut;st:300;sp:500;" data-frame_999="o:0;st:w;" style="z-index:12;">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/03/Home1_rev2-img-2.jpg" alt="a" width="408" height="521" data-no-retina>
+                                                                                    </rs-layer><rs-layer id="slider-6-slide-6-layer-7" data-type="image" data-xy="x:c;xo:-408px,-387px,-315px,-594px;y:m;yo:61px,41px,46px,-262px;" data-text="w:normal;" data-dim="w:303px,250px,180px,180px;h:303px,250px,180px,180px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:-50;" data-frame_1="e:power1.inOut;st:500;" data-frame_999="o:0;st:w;" style="z-index:15;">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/03/Home1_rev2-img-1.jpg" alt="s" width="303" height="303" data-no-retina>
+                                                                                    </rs-layer><rs-layer id="slider-6-slide-6-layer-8" data-type="image" data-xy="x:c;xo:-376px,-363px,-374px,-281px;y:m;yo:-139px,-99px,-129px,-137px;" data-text="w:normal;" data-dim="w:592px,480px,480px,480px;h:415px,336px,336px,336px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:-50px;y:-50;" data-frame_1="e:power1.inOut;st:750;sp:500;" data-frame_999="o:0;st:w;" style="z-index:9;">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/03/Home1_rev2-img-3.png" alt="a" width="592" height="415" data-no-retina>
+                                                                                    </rs-layer><rs-layer id="slider-6-slide-6-layer-9" data-type="image" data-xy="x:c;xo:-495px,-442px,-442px,-165px;y:m;yo:-175px,-156px,-141px,-156px;" data-text="w:normal;" data-dim="w:190px,150px,150px,150px;h:262px,207px,207px,207px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="sX:0.9;sY:0.9;" data-frame_1="st:1000;sp:1000;" data-frame_999="o:0;st:w;" style="z-index:14;">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/03/Home1_rev2-img-4.png" alt="s" width="190" height="262" data-no-retina>
+                                                                                    </rs-layer><rs-layer id="slider-6-slide-6-layer-10" data-type="image" data-xy="x:c;xo:-593px,-540px,-443px,-443px;y:m;yo:197px,157px,142px,142px;" data-text="w:normal;" data-dim="w:116px,90px,60px,60px;h:274px,213px,142px,142px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="sX:0.9;sY:0.9;" data-frame_1="st:1700;sp:1000;" data-frame_999="o:0;st:w;" style="z-index:16;">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/03/Home1_rev2-img-5.png" alt="a" width="116" height="274" data-no-retina>
+                                                                                    </rs-layer><rs-layer id="slider-6-slide-6-layer-11" data-type="image" data-xy="x:c;xo:106px,17px,-61px,171px;y:m;yo:141px,125px,93px,71px;" data-text="w:normal;" data-dim="w:174px,140px,140px,140px;h:158px,122px,122px,122px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;y:50;" data-frame_1="e:power1.inOut;st:750;sp:500;" data-frame_999="o:0;st:w;" style="z-index:8;">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/03/Landing-rev-img-9.png" alt="a" width="310" height="282" data-no-retina>
+                                                                                    </rs-layer><rs-layer id="slider-6-slide-6-layer-12" data-type="image" data-xy="x:r;xo:0,-2px,-12px,0;y:m;yo:-62px,-102px,-102px,-152px;" data-text="w:normal;" data-dim="w:256px,160px,160px,160px;h:330px,206px,206px,206px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:99%;o:1;" data-frame_0_mask="u:t;x:-100%;" data-frame_1="e:power3.out;st:1900;sp:1500;" data-frame_1_mask="u:t;" data-frame_999="o:0;st:w;" style="z-index:17;">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/03/Home1_rev2-img-7.png" alt="s" width="256" height="330" data-no-retina>
+                                                                                    </rs-layer>
+                                                                                </rs-slide>
+                                                                            </rs-slides>
+                                                                        </rs-module>
+                                                                        <script type="text/javascript">
+                                                                            setREVStartSize({ c: 'rev_slider_6_2', rl: [1920, 1720, 1025, 700], el: [780, 680, 660, 740], gw: [1240, 1024, 778, 480], gh: [780, 680, 660, 740], type: 'standard', justify: '', layout: 'fullwidth', mh: "0" });
+                                                                            var revapi6,
+                                                                                tpj;
+                                                                            jQuery(function () {
+                                                                                tpj = jQuery;
+                                                                                revapi6 = tpj("#rev_slider_6_2")
+                                                                                if (revapi6 == undefined || revapi6.revolution == undefined) {
+                                                                                    revslider_showDoubleJqueryError("rev_slider_6_2");
+                                                                                } else {
+                                                                                    revapi6.revolution({
+                                                                                        sliderLayout: "fullwidth",
+                                                                                        visibilityLevels: "1920,1720,1025,700",
+                                                                                        gridwidth: "1240,1024,778,480",
+                                                                                        gridheight: "780,680,660,740",
+                                                                                        startDelay: "0ms",
+                                                                                        perspective: 600,
+                                                                                        perspectiveType: "local",
+                                                                                        editorheight: "780,680,660,740",
+                                                                                        responsiveLevels: "1920,1720,1025,700",
+                                                                                        progressBar: { disableProgressBar: true },
+                                                                                        navigation: {
+                                                                                            onHoverStop: false
+                                                                                        },
+                                                                                        viewPort: {
+                                                                                            enable: true
+                                                                                        },
+                                                                                        fallbacks: {
+                                                                                            allowHTML5AutoPlayOnAndroid: true
+                                                                                        },
+                                                                                    });
+                                                                                }
+
+                                                                            });
+                                                                        </script>
+                                                                    </rs-module-wrap>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+
+                                <section class="elementor-element elementor-element-027488b elementor-section-full_width elementor-section-height-default elementor-section-height-default qodef-elementor-content-no elementor-section elementor-top-section" data-id="027488b" data-element_type="section">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-row">
+                                            <div class="elementor-element elementor-element-df7e4dc elementor-column elementor-col-100 elementor-top-column" data-id="df7e4dc" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-7787dd5 elementor-widget elementor-widget-konsept_core_video_button" data-id="7787dd5" data-element_type="widget" data-widget_type="konsept_core_video_button.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="qodef-shortcode qodef-m  qodef-video-button qodef--has-img">
+                                                                    <div class="qodef-m-image">
+                                                                        <img width="1920" height="726" src="~/Content/wp-content/uploads/2020/03/Home1_section4_video.jpg" class="attachment-full size-full" alt="a" srcset="https:~/Content/wp-content/uploads/2020/03/Home1_section4_video.jpg 1920w, https:~/Content/wp-content/uploads/2020/03/Home1_section4_video-600x227.jpg 600w, https:~/Content/wp-content/uploads/2020/03/Home1_section4_video-800x303.jpg 800w, https:~/Content/wp-content/uploads/2020/03/Home1_section4_video-300x113.jpg 300w, https:~/Content/wp-content/uploads/2020/03/Home1_section4_video-1024x387.jpg 1024w, https:~/Content/wp-content/uploads/2020/03/Home1_section4_video-768x290.jpg 768w, https:~/Content/wp-content/uploads/2020/03/Home1_section4_video-1536x581.jpg 1536w" sizes="(max-width: 1920px) 100vw, 1920px" />
+                                                                    </div>
+                                                                    <a itemprop="url" class="qodef-m-play qodef-magnific-popup qodef-popup-item" href="https://vimeo.com/117179035" data-type="iframe">
+                                                                        <span class="qodef-m-play-inner">
+                                                                            <svg class="qodef-svg-circle"><circle cx="50%" cy="50%" r="50%"></circle><circle cx="50%" cy="50%" r="50%"></circle></svg>
+                                                                            <span class="qodef-m-play-square"></span> <span>Play</span>
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+
+                                <section class="elementor-element elementor-element-061e58c qodef-elementor-content-grid elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="061e58c" data-element_type="section">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-row">
+                                            <div class="elementor-element elementor-element-7d539d3 elementor-column elementor-col-100 elementor-top-column" data-id="7d539d3" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-6776a5b elementor-widget elementor-widget-konsept_core_testimonials_list" data-id="6776a5b" data-element_type="widget" data-widget_type="konsept_core_testimonials_list.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="qodef-testimonials-list">
+                                                                    <div class="qodef-e-testimonials-icon">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="137.982" height="125"><path class="qodef-quote-svg-blob" fill="#E6DEDC" d="M61.886 7.875S6.369-12.676 1.874 14.725c-4.496 27.4 7.492 121.593 56.016 107.322s62.795-37.105 50.235-68.503C95.566 22.145 75.158 11.87 61.886 7.875z" /><circle fill="none" stroke="#8B8B8B" stroke-miterlimit="10" cx="75.449" cy="61.993" r="61.4" /><path fill="#211F1F" d="M63.553 69.24c1.641-1.549 2.916-3.439 3.829-5.674a18.482 18.482 0 001.367-7.042c0-1.184-.137-2.369-.41-3.555l5.879-.957c.273 1.186.41 2.371.41 3.555 0 3.1-.73 6.132-2.188 9.093-1.459 2.963-3.374 5.4-5.743 7.314l-3.144-2.734zm12.716 0c1.641-1.549 2.917-3.439 3.829-5.674a18.482 18.482 0 001.367-7.042c0-1.184-.137-2.369-.41-3.555l5.879-.957c.273 1.186.41 2.371.41 3.555 0 3.1-.73 6.132-2.188 9.093-1.459 2.963-3.374 5.4-5.743 7.314l-3.144-2.734z" /></svg>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="qodef-e-testimonials-title">Müşterilerimizin Söyledikleri</div>
+                                                                        <div class="qodef-shortcode qodef-m   qodef-grid qodef-swiper-container  qodef-gutter--normal  qodef-item-layout--info-below qodef-responsive--predefined" data-options="{&quot;slidesPerView&quot;:1,&quot;spaceBetween&quot;:15,&quot;loop&quot;:true,&quot;autoplay&quot;:true,&quot;speed&quot;:&quot;&quot;,&quot;speedAnimation&quot;:&quot;&quot;,&quot;unique&quot;:&quot;20&quot;,&quot;outsideNavigation&quot;:&quot;yes&quot;,&quot;outsidePagination&quot;:&quot;yes&quot;,&quot;direction&quot;:&quot;vertical&quot;}">
+                                                                            <div class="swiper-wrapper">
+                                                                                <div class="qodef-e swiper-slide">
+                                                                                    <div class="qodef-e-inner">
+                                                                                        <div class="qodef-e-content">
+                                                                                            <h3 itemprop="description" class="qodef-e-text">
+                                                                                                Yapılan dolaplardan çok memnun oldum. Tasarım ve hizmet bakımından sizlere güveniyorum.
+                                                                                            </h3>
+                                                                                            <div class="qodef-e-author">
+                                                                                                <span class="qodef-e-author-name">
+                                                                                                    Prescott C.
+                                                                                                </span>
+                                                                                                <span class="qodef-e-author-job">
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div><div class="qodef-e swiper-slide">
+                                                                                    <div class="qodef-e-inner">
+                                                                                        <div class="qodef-e-content">
+                                                                                            <h3 itemprop="description" class="qodef-e-text">
+                                                                                                Hizmet gerçekten eksiksiz.
+                                                                                            </h3>
+                                                                                            <div class="qodef-e-author">
+                                                                                                <span class="qodef-e-author-name">
+                                                                                                    Glenn F.
+                                                                                                </span>
+                                                                                                <span class="qodef-e-author-job">
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div><div class="qodef-e swiper-slide">
+                                                                                    <div class="qodef-e-inner">
+                                                                                        <div class="qodef-e-content">
+                                                                                            <h3 itemprop="description" class="qodef-e-text">
+                                                                                                Herkese gönül rahatlığıyla önerebilirim.
+                                                                                            </h3>
+                                                                                            <div class="qodef-e-author">
+                                                                                                <span class="qodef-e-author-name">
+                                                                                                    Anna Smith
+                                                                                                </span>
+                                                                                                <span class="qodef-e-author-job">
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="swiper-pagination"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+
+                                <section class="elementor-element elementor-element-f892d64 qodef-elementor-content-grid elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f892d64" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-row">
+                                            <div class="elementor-element elementor-element-c1e866a elementor-column elementor-col-25 elementor-top-column" data-id="c1e866a" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-7c60ca5 elementor-widget elementor-widget-konsept_core_icon_with_text" data-id="7c60ca5" data-element_type="widget" data-widget_type="konsept_core_icon_with_text.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="qodef-shortcode qodef-m  qodef-icon-with-text qodef-layout--before-content qodef--custom-icon">
+                                                                    <div class="qodef-m-icon-wrapper" style="width: 50px">
+                                                                        <img width="100" height="100" src="~/Content/wp-content/uploads/2020/03/Home1_icons-2.png" class="attachment-full size-full" alt="a" />
+                                                                    </div>
+                                                                    <div class="qodef-m-content">
+                                                                        <h4 class="qodef-m-title" style="color: #FFFFFF">
+                                                                            <span class="qodef-m-title-text">24 Saat Hizmet</span>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-38582ea elementor-column elementor-col-25 elementor-top-column" data-id="38582ea" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-77debbd elementor-widget elementor-widget-konsept_core_icon_with_text" data-id="77debbd" data-element_type="widget" data-widget_type="konsept_core_icon_with_text.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="qodef-shortcode qodef-m  qodef-icon-with-text qodef-layout--before-content qodef--custom-icon">
+                                                                    <div class="qodef-m-icon-wrapper" style="width: 50px">
+                                                                        <img width="100" height="94" src="~/Content/wp-content/uploads/2020/03/Home1_icons-3.png" class="attachment-full size-full" alt="a" />
+                                                                    </div>
+                                                                    <div class="qodef-m-content">
+                                                                        <h4 class="qodef-m-title" style="color: #FFFFFF">
+                                                                            <span class="qodef-m-title-text">Ücretsiz Bakım</span>
+                                                                        </h4>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-23d469a elementor-column elementor-col-25 elementor-top-column" data-id="23d469a" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-5ee585f elementor-widget elementor-widget-konsept_core_icon_with_text" data-id="5ee585f" data-element_type="widget" data-widget_type="konsept_core_icon_with_text.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="qodef-shortcode qodef-m  qodef-icon-with-text qodef-layout--before-content qodef--custom-icon">
+                                                                    <div class="qodef-m-icon-wrapper" style="width: 50px">
+                                                                        <img width="100" height="94" src="~/Content/wp-content/uploads/2020/03/Home1_icons-4.png" class="attachment-full size-full" alt="a" />
+                                                                    </div>
+                                                                    <div class="qodef-m-content">
+                                                                        <h4 class="qodef-m-title" style="color: #FFFFFF">
+                                                                            <span class="qodef-m-title-text">Hizmet Memnuniyeti</span>
+                                                                        </h4>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-4d48b0e elementor-column elementor-col-25 elementor-top-column" data-id="4d48b0e" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-79504c6 elementor-widget elementor-widget-konsept_core_icon_with_text" data-id="79504c6" data-element_type="widget" data-widget_type="konsept_core_icon_with_text.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="qodef-shortcode qodef-m  qodef-icon-with-text qodef-layout--before-content qodef--custom-icon">
+                                                                    <div class="qodef-m-icon-wrapper" style="width: 50px">
+                                                                        <img width="100" height="92" src="~/Content/wp-content/uploads/2020/03/Home1_icons-1.png" class="attachment-full size-full" alt="a" />
+                                                                    </div>
+                                                                    <div class="qodef-m-content">
+                                                                        <h4 class="qodef-m-title" style="color: #FFFFFF">
+                                                                            <span class="qodef-m-title-text">Hızlı Montaj</span>
+                                                                        </h4>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+
+                                <section class="elementor-element elementor-element-cc80469 qodef-extended-grid qodef-extended-grid--right qodef-elementor-content-grid elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="cc80469" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-row">
+                                            <div class="elementor-element elementor-element-000ade8 elementor-column elementor-col-100 elementor-top-column" data-id="000ade8" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-2d36b9f elementor-widget elementor-widget-spacer" data-id="2d36b9f" data-element_type="widget" data-widget_type="spacer.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="elementor-spacer">
+                                                                    <div class="elementor-spacer-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="elementor-element elementor-element-e63b0c1 elementor-widget elementor-widget-spacer" data-id="e63b0c1" data-element_type="widget" data-widget_type="spacer.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="elementor-spacer">
+                                                                    <div class="elementor-spacer-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="elementor-element elementor-element-d1e6af0 elementor-widget elementor-widget-konsept_core_product_list" data-id="d1e6af0" data-element_type="widget" data-widget_type="konsept_core_product_list.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="qodef-woo-product-list-slider-wrapper">
+                                                                    <div class="qodef-shortcode qodef-m  qodef-woo-shortcode qodef-woo-product-list qodef-item-layout--presentational qodef-swiper-arrows-outside qodef-product-slider-offset qodef-swiper-has-bullets qodef-grid qodef-swiper-container  qodef-gutter--enormous qodef-col-num--4 qodef-item-layout--presentational qodef-pagination--off qodef-responsive--predefined" data-options="{&quot;slidesPerView&quot;:&quot;4&quot;,&quot;spaceBetween&quot;:40,&quot;loop&quot;:true,&quot;autoplay&quot;:true,&quot;speed&quot;:&quot;2000&quot;,&quot;speedAnimation&quot;:&quot;&quot;,&quot;unique&quot;:&quot;21&quot;,&quot;outsideNavigation&quot;:&quot;yes&quot;}">
+                                                                        <div class="swiper-wrapper">
+
+
+                                                                            <!-- IMAGE 1-->
+                                                                            <div class="qodef-e swiper-slide qodef-item--custom product type-product post-1193 status-publish instock product_cat-kitchen product_tag-wood has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                                                                <div class="qodef-woo-product-inner">
+                                                                                    <div class="qodef-woo-product-image">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/04/home1_1-1-600x600.jpg" alt="n" width="600" height="600" /> <div class="qodef-woo-product-image-inner">
+                                                                                            <a href="product/food-board/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!-- IMAGE 2-->
+                                                                            <div class="qodef-e swiper-slide qodef-item--custom product type-product post-1202 status-publish last instock product_cat-kitchen product_tag-elegant has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                                                                <div class="qodef-woo-product-inner">
+
+                                                                                    <div class="qodef-woo-product-image">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/04/slider_featured_90-600x600.jpg" alt="d" width="600" height="600" /> <div class="qodef-woo-product-image-inner">
+                                                                                            <a href="product/plate/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <!-- IMAGE 3-->
+                                                                            <div class="qodef-e swiper-slide qodef-item--custom product type-product post-4541 status-publish instock product_cat-decorative product_tag-room has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                                                                <div class="qodef-woo-product-inner">
+                                                                                    <div class="qodef-woo-product-image">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/05/slider_featured_80-600x600.jpg" alt="h" width="600" height="600" /> <div class="qodef-woo-product-image-inner">
+                                                                                            <a href="product/book-sling/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!-- IMAGE 4-->
+                                                                            <div class="qodef-e swiper-slide qodef-item--custom product type-product post-4467 status-publish last instock product_cat-decorative product_tag-room product_tag-wood has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                                                                <div class="qodef-woo-product-inner">
+                                                                                    <div class="qodef-woo-product-image">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/05/slider_featured_4-600x600.jpg" alt="f" width="600" height="600" /> <div class="qodef-woo-product-image-inner">
+                                                                                            <a href="product/bowl/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!-- IMAGE 5-->
+                                                                            <div class="qodef-e swiper-slide qodef-item--custom product type-product post-6439 status-publish first instock product_cat-kitchen product_tag-glass product_tag-vasses has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                                                                <div class="qodef-woo-product-inner">
+                                                                                    <div class="qodef-woo-product-image">
+                                                                                        <img src="~/Content/wp-content/uploads/2020/04/shopslider_40-600x600.jpg" alt="g" width="600" height="600" /> <div class="qodef-woo-product-image-inner">
+                                                                                            <a href="product/blue-glass/index.html" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                        </div>
+                                                                        <div class="swiper-pagination"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-element elementor-element-2eca9e4 elementor-widget elementor-widget-spacer" data-id="2eca9e4" data-element_type="widget" data-widget_type="spacer.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="elementor-spacer">
+                                                                    <div class="elementor-spacer-inner"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="elementor-element elementor-element-1319c83 elementor-section-content-middle qodef-elementor-content-grid elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1319c83" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-row">
+                                            <div class="elementor-element elementor-element-8529042 elementor-column elementor-col-100 elementor-top-column" data-id="8529042" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-d1022c3 elementor-widget__width-auto elementor-widget elementor-widget-wp-widget-konsept_core_custom_font" data-id="d1022c3" data-element_type="widget" data-widget_type="wp-widget-konsept_core_custom_font.default">
+                                                            <div class="elementor-widget-container">
+                                                                <p class="qodef-shortcode qodef-m  qodef-custom-font  qodef-custom-font-22 qodef-layout--simple" style="color: #ffffff;font-family: the gwathmey;font-size: 37px">HakMobilya Dekorasyon Her Zaman Yanınızda</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

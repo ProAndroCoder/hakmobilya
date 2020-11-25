@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mobilyaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="hakkimizda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="foto" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="baslik" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ustbaslik" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="icerik" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kategori">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kullanicilar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sifre" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="role" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="urunler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="foto" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ustbaslik" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="icerik" Type="text" Nullable="false" />
+    <Property Name="aktifmi" Type="tinyint" Nullable="false" />
+    <Property Name="sira" Type="int" Nullable="false" />
+    <Property Name="katId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK">
+    <End Role="kategori" Type="Self.kategori" Multiplicity="1" />
+    <End Role="urunler" Type="Self.urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategori">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="urunler">
+        <PropertyRef Name="katId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mobilyaModelStoreContainer">
+    <EntitySet Name="hakkimizda" EntityType="Self.hakkimizda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kategori" EntityType="Self.kategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kullanicilar" EntityType="Self.kullanicilar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="urunler" EntityType="Self.urunler" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK" Association="Self.FK">
+      <End Role="kategori" EntitySet="kategori" />
+      <End Role="urunler" EntitySet="urunler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

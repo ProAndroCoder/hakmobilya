@@ -1,0 +1,909 @@
+﻿@model List<WebApplication1.Models.urunler>
+@using WebApplication1.Controllers
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <script>document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
+    <title>Konsept &#8211; Furniture Store Theme</title>
+
+    <script data-cfasync="false" data-pagespeed-no-defer>
+        //<![CDATA[
+        var gtm4wp_datalayer_name = "dataLayer";
+        var dataLayer = dataLayer || [];
+        //]]>
+    </script>
+    <link rel='dns-prefetch' href='http://export.qodethemes.com/' />
+    <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+    <link rel='dns-prefetch' href='http://s.w.org/' />
+    <link rel="alternate" type="application/rss+xml" title="Konsept &raquo; Feed" href="feed/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="Konsept &raquo; Comments Feed" href="comments/feed/index.html" />
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/konsept.qodeinteractive.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.4" } };
+        /*! This file is auto-generated */
+        !function (e, a, t) { var r, n, o, i, p = a.createElement("canvas"), s = p.getContext && p.getContext("2d"); function c(e, t) { var a = String.fromCharCode; s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, e), 0, 0); var r = p.toDataURL(); return s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, t), 0, 0), r === p.toDataURL() } function l(e) { if (!s || !s.fillText) return !1; switch (s.textBaseline = "top", s.font = "600 32px Arial", e) { case "flag": return !c([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) && (!c([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !c([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447])); case "emoji": return !c([55357, 56424, 55356, 57342, 8205, 55358, 56605, 8205, 55357, 56424, 55356, 57340], [55357, 56424, 55356, 57342, 8203, 55358, 56605, 8203, 55357, 56424, 55356, 57340]) }return !1 } function d(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (i = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, o = 0; o < i.length; o++)t.supports[i[o]] = l(i[o]), t.supports.everything = t.supports.everything && t.supports[i[o]], "flag" !== i[o] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[i[o]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (r = t.source || {}).concatemoji ? d(r.concatemoji) : r.wpemoji && r.twemoji && (d(r.twemoji), d(r.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='sb_instagram_styles-css' href='~/Content/wp-content/plugins/instagram-feed/css/sb-instagram-2-2.min747d.css?ver=2.4.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='dripicons-css' href='~/Content/wp-content/plugins/konsept-core/inc/icons/dripicons/assets/css/dripicons.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='elegant-icons-css' href='~/Content/wp-content/plugins/konsept-core/inc/icons/elegant-icons/assets/css/elegant-icons.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css' href='~/Content/wp-content/plugins/konsept-core/inc/icons/font-awesome/assets/css/all.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <style id='font-awesome-inline-css' type='text/css'>
+        [data-font="FontAwesome"]:before {
+            font-family: 'FontAwesome' !important;
+            content: attr(data-icon) !important;
+            speak: none !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            line-height: 1 !important;
+            font-style: normal !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+        }
+    </style>
+    <link rel='stylesheet' id='ionicons-css' href='~/Content/wp-content/plugins/konsept-core/inc/icons/ionicons/assets/css/ionicons.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='linea-icons-css' href='~/Content/wp-content/plugins/konsept-core/inc/icons/linea-icons/assets/css/linea-icons.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='linear-icons-css' href='~/Content/wp-content/plugins/konsept-core/inc/icons/linear-icons/assets/css/linear-icons.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='material-icons-css' href='https://fonts.googleapis.com/icon?family=Material+Icons&amp;ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='simple-line-icons-css' href='~/Content/wp-content/plugins/konsept-core/inc/icons/simple-line-icons/assets/css/simple-line-icons.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-css' href='~/Content/wp-includes/css/dist/block-library/style.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-block-vendors-style-css' href='~/Content/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/vendors-styleeed8.css?ver=2.7.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-block-style-css' href='~/Content/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/styleeed8.css?ver=2.7.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-selectBox-css' href='~/Content/wp-content/plugins/yith-woocommerce-wishlist/assets/css/jquery.selectBox7359.css?ver=1.2.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='yith-wcwl-font-awesome-css' href='~/Content/wp-content/plugins/yith-woocommerce-wishlist/assets/css/font-awesome.min1849.css?ver=4.7.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='yith-wcwl-main-css' href='~/Content/wp-content/plugins/yith-woocommerce-wishlist/assets/css/style9b4a.css?ver=3.0.11' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css' href='~/Content/wp-content/plugins/contact-form-7/includes/css/styles5fba.css?ver=5.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='ctf_styles-css' href='~/Content/wp-content/plugins/custom-twitter-feeds/css/ctf-styles.mincc1a.css?ver=1.5.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='rabbit_css-css' href='../export.qodethemes.com/_toolbar/assets/css/rbt-modules7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css' href='~/Content/wp-content/plugins/revslider/public/assets/css/rs6dea7.css?ver=6.2.12' type='text/css' media='all' />
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        #rs-demo-id {
+        }
+    </style>
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+    <link rel='stylesheet' id='select2-css' href='~/Content/wp-content/plugins/woocommerce/assets/css/select25b31.css?ver=4.3.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='konsept-core-dashboard-style-css' href='~/Content/wp-content/plugins/konsept-core/inc/core-dashboard/assets/css/core-dashboard.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='perfect-scrollbar-css' href='~/Content/wp-content/plugins/konsept-core/assets/plugins/perfect-scrollbar/perfect-scrollbar7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='swiper-css' href='~/Content/wp-content/themes/konsept/assets/plugins/swiper/swiper.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='konsept-main-css' href='~/Content/wp-content/themes/konsept/assets/css/main.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='konsept-core-style-css' href='~/Content/wp-content/plugins/konsept-core/assets/css/konsept-core.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='konsept-membership-style-css' href='~/Content/wp-content/plugins/konsept-membership/assets/css/konsept-membership.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='yith_wccl_frontend-css' href='~/Content/wp-content/plugins/yith-woocommerce-color-label-variations-premium/assets/css/yith-wccldb08.css?ver=1.10.3' type='text/css' media='all' />
+    <style id='yith_wccl_frontend-inline-css' type='text/css'>
+        .select_option .yith_wccl_tooltip > span {
+            background: #222222;
+            color: #ffffff;
+        }
+
+        .select_option .yith_wccl_tooltip.bottom span:after {
+            border-bottom-color: #222222;
+        }
+
+        .select_option .yith_wccl_tooltip.top span:after {
+            border-top-color: #222222;
+        }
+    </style>
+    <link rel='stylesheet' id='yith-quick-view-css' href='~/Content/wp-content/plugins/yith-woocommerce-quick-view/assets/css/yith-quick-view1159.css?ver=1.4.2' type='text/css' media='all' />
+    <style id='yith-quick-view-inline-css' type='text/css'>
+
+        #yith-quick-view-modal .yith-wcqv-main {
+            background: #ffffff;
+        }
+
+        #yith-quick-view-close {
+            color: #cdcdcd;
+        }
+
+            #yith-quick-view-close:hover {
+                color: #ff0000;
+            }
+    </style>
+    <link rel='stylesheet' id='woocommerce_prettyPhoto_css-css' href='~/Content/wp-content/plugins/woocommerce/assets/css/prettyPhoto7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='magnific-popup-css' href='~/Content/wp-content/themes/konsept/assets/plugins/magnific-popup/magnific-popup7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='konsept-google-fonts-css' href='https://fonts.googleapis.com/css?family=Josefin+Sans%3A300%2C400%2C400i%2C600%2C700%7COpen+Sans%3A300%2C400%2C400i%2C600%2C700%7CEB+Garamond%3A300%2C400%2C400i%2C600%2C700&amp;subset=latin-ext&amp;ver=1.0.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='konsept-style-css' href='~/Content/wp-content/themes/konsept/style7263.css?ver=5.4.4' type='text/css' media='all' />
+    <style id='konsept-style-inline-css' type='text/css'>
+
+        #qodef-page-inner {
+            padding: 0 0;
+        }
+
+        #qodef-page-inner {
+            padding: 0 0;
+        }
+
+        #qodef-top-area-inner {
+            height: 35px;
+        }
+
+        #qodef-side-area {
+            background-color: #ffffff;
+        }
+
+        .qodef-page-title {
+            height: 60px;
+            background-color: #f4f2f2;
+        }
+
+        .qodef-page-titlex {
+            height: 420px;
+            background-color: #f4f2f2;
+            background-image: url("https://konsept.qodeinteractive.com/wp-content/uploads/2020/04/About-us_title.jpg");
+        }
+
+            .qodef-page-titlex .qodef-m-titlex {
+                color: #ffffff;
+            }
+
+        .qodef-h1, h1 {
+            font-family: "Josefin Sans",sans-serif;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 420px;
+        }
+
+        a, p a {
+            letter-spacing: 0px;
+        }
+
+        h1 {
+            font-size: 35px;
+        }
+    </style>
+    <link rel='stylesheet' id='konsept-core-elementor-css' href='~/Content/wp-content/plugins/konsept-core/inc/plugins/elementor/assets/css/elementor.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-css' href='~/Content/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min87e8.css?ver=5.7.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-animations-css' href='~/Content/wp-content/plugins/elementor/assets/lib/animations/animations.mincaa5.css?ver=2.9.13' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-frontend-css' href='~/Content/wp-content/plugins/elementor/assets/css/frontend.mincaa5.css?ver=2.9.13' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-post-13-css' href='~/Content/wp-content/uploads/elementor/css/post-139d55.css?ver=1604329437' type='text/css' media='all' />
+    <script type="text/template" id="tmpl-variation-template">
+        <div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
+        <div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
+        <div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
+    </script>
+    <script type="text/template" id="tmpl-unavailable-variation-template">
+        <p>Sorry, this product is unavailable. Please choose a different combination.</p>
+    </script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/jquery/jquery4a5f.js?ver=1.12.4-wp'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var sb_instagram_js_options = { "font_method": "svg", "resized_url": "https:\/\/konsept.qodeinteractive.com\/~/Content/wp-content\/uploads\/sb-instagram-feed-images\/", "placeholder": "https:\/\/konsept.qodeinteractive.com\/~/Content/wp-content\/plugins\/instagram-feed\/img\/placeholder.png" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/instagram-feed/js/sb-instagram-2-2.min747d.js?ver=2.4.5'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/revslider/public/assets/js/rbtools.min8bc9.js?ver=6.0.7'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/revslider/public/assets/js/rs6.mindea7.js?ver=6.2.12'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-trackere899.js?ver=1.11.4'></script>
+    <link rel='https://api.w.org/' href='~/Content/wp-json/index.html' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="~/Content/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.4.4" />
+    <meta name="generator" content="WooCommerce 4.3.1" />
+    <link rel="canonical" href="index.html" />
+    <link rel='shortlink' href='index.html' />
+    <link rel="alternate" type="application/json+oembed" href="~/Content/wp-json/oembed/1.0/embed6213.json?url=https%3A%2F%2Fkonsept.qodeinteractive.com%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="~/Content/wp-json/oembed/1.0/embedcddb?url=https%3A%2F%2Fkonsept.qodeinteractive.com%2F&amp;format=xml" />
+
+
+    <meta property='og:site_name' content='Konsept' />
+    <meta property='og:url' content='https://konsept.qodeinteractive.com' />
+    <meta property='og:locale' content='en_US' />
+    <meta property='og:description' content='Furniture Store Theme' />
+    <meta property='og:title' content='Konsept' />
+    <meta property='og:type' content='website' />
+    <meta property='og:image' content='~/Content/wp-content/uploads/2020/07/open-grapsh_konsept.png' />
+    <meta property='og:image:width' content='1200' />
+    <meta property='og:image:height' content='630' />
+    <meta name='twitter:card' content='summary' />
+    <meta name='twitter:title' content='Konsept' />
+    <meta name='twitter:image' content='~/Content/wp-content/uploads/2020/07/open-grapsh_konsept.png' />
+    <meta name='twitter:description' content='Furniture Store Theme' />
+
+
+    <script data-cfasync="false" data-pagespeed-no-defer>
+        //<![CDATA[
+        var dataLayer_content = { "pagePostType": "frontpage", "pagePostType2": "single-page", "pagePostAuthor": "admin" };
+        dataLayer.push(dataLayer_content);//]]>
+    </script>
+    <script data-cfasync="false">
+        //<![CDATA[
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.' + 'js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KLJLSX7');//]]>
+    </script>
+
+    <noscript>
+        <style>
+            .woocommerce-product-gallery {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+    <meta name="generator" content="Powered by Slider Revolution 6.2.12 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <link rel="icon" href="~/Content/wp-content/uploads/2020/06/cropped-Favicon_konsept_02-1-32x32.png" sizes="32x32" />
+    <link rel="icon" href="~/Content/wp-content/uploads/2020/06/cropped-Favicon_konsept_02-1-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="~/Content/wp-content/uploads/2020/06/cropped-Favicon_konsept_02-1-180x180.png" />
+    <meta name="msapplication-TileImage" content="~/Content/wp-content/uploads/2020/06/cropped-Favicon_konsept_02-1-270x270.png" />
+    <script type="text/javascript">
+        function setREVStartSize(e) {
+            //window.requestAnimationFrame(function() {
+            window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
+            window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
+            try {
+                var pw = document.getElementById(e.c).parentNode.offsetWidth,
+                    newh;
+                pw = pw === 0 || isNaN(pw) ? window.RSIW : pw;
+                e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
+                e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
+                e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
+                e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
+                e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
+                e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
+                e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
+                if (e.layout === "fullscreen" || e.l === "fullscreen")
+                    newh = Math.max(e.mh, window.RSIH);
+                else {
+                    e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+                    for (var i in e.rl) if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
+                    e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
+                    e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+                    for (var i in e.rl) if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
+
+                    var nl = new Array(e.rl.length),
+                        ix = 0,
+                        sl;
+                    e.tabw = e.tabhide >= pw ? 0 : e.tabw;
+                    e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
+                    e.tabh = e.tabhide >= pw ? 0 : e.tabh;
+                    e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
+                    for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
+                    sl = nl[0];
+                    for (var i in nl) if (sl > nl[i] && nl[i] > 0) { sl = nl[i]; ix = i; }
+                    var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
+                    newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
+                }
+                if (window.rs_init_css === undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));
+                document.getElementById(e.c).height = newh + "px";
+                window.rs_init_css.innerHTML += "#" + e.c + "_wrapper { height: " + newh + "px }";
+            } catch (e) {
+                console.log("Failure at Presize of Slider:" + e)
+            }
+            //});
+        };</script>
+</head>
+
+
+
+<body class="home page-template page-template-page-full-width page-template-page-full-width-php page page-id-13 theme-konsept qode-framework-1.1.2 woocommerce-no-js qodef-back-to-top--enabled  qodef-content-grid-1300 qodef-header--centered qodef-header-appearance--sticky qodef-mobile-header--standard qodef-drop-down-second--full-width qodef-drop-down-second--animate-height qodef-product-single--layout konsept-core-1.1 konsept-membership-1.0 konsept-1.1.1 elementor-default elementor-kit-15 elementor-page elementor-page-13" itemscope itemtype="https://schema.org/WebPage">
+    <div id="qodef-page-wrapper" class="">
+
+
+
+        <header id="qodef-page-header">
+            <div id="qodef-page-header-inner" class="qodef-content-grid">
+                <div class="qodef-centered-header-wrapper">
+                    <div class="qodef-widget-holder">
+                        <div id="search-4" class="widget widget_search qodef-header-widget-area-two" data-area="header-widget-two">
+
+                        </div>
+                    </div>
+                    <a itemprop="url" class="qodef-header-logo-link qodef-height--set" href="index.html" style="height:58px" rel="home">
+                        <img width="330" height="116" src="~/Content/wp-content/uploads/2020/07/logo_main.png" class="qodef-header-logo-image qodef--main" alt="logo main" itemprop="image" srcset="~/Content/wp-content/uploads/2020/07/logo_main.png 330w, ~/Content/wp-content/uploads/2020/07/logo_mainpng-300x105.png 300w" sizes="(max-width: 330px) 100vw, 330px" /> <img width="330" height="116" src="~/Content/wp-content/uploads/2020/07/logo_main.png" class="qodef-header-logo-image qodef--dark" alt="logo dark" itemprop="image" srcset="~/Content/wp-content/uploads/2020/07/logo_main.png 330w, ~/Content/wp-content/uploads/2020/07/logo_mainpng-300x105.png 300w" sizes="(max-width: 330px) 100vw, 330px" /> <img width="330" height="116" src="~/Content/wp-content/uploads/2020/07/logo_main.png" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image" srcset="~/Content/wp-content/uploads/2020/07/logo_main.png 330w, ~/Content/wp-content/uploads/2020/07/logo_mainpng-300x105.png 300w" sizes="(max-width: 330px) 100vw, 330px" />
+                    </a> <div class="qodef-widget-holder">
+                        <div id="konsept_membership_login_opener-2" class="widget widget_konsept_membership_login_opener qodef-header-widget-area-one" data-area="header-widget-one">
+
+                        </div><div id="konsept_core_separator-17" class="widget widget_konsept_core_separator qodef-header-widget-area-one" data-area="header-widget-one">
+                            <div class="qodef-shortcode qodef-m  qodef-separator clear ">
+                                <div class="qodef-m-line" style="border-style: solid"></div>
+                            </div>
+                        </div>
+                        <div id="konsept_core_yith_wishlist-2" class="widget widget_konsept_core_yith_wishlist qodef-header-widget-area-one" data-area="header-widget-one">
+
+                        </div><div id="konsept_core_woo_side_area_cart-3" class="widget widget_konsept_core_woo_side_area_cart qodef-header-widget-area-one" data-area="header-widget-one">
+                            <div class="qodef-woo-side-area-cart qodef-m" style="padding: 6px 0px 0px 6px">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <nav class="qodef-header-navigation" role="navigation" aria-label="Top Menu">
+                    <ul id="menu-centered-1" class="menu">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="MainPage"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-875 qodef-menu-item--narrow">
+                            <a href="@Url.Action("Index","Default")"><span class="qodef-menu-item-text">Ana Sayfa</span></a>
+
+                        </li>
+
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="About"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-884 qodef-menu-item--narrow">
+                            <a href="@Url.Action("Hakkimizda","Default")"><span class="qodef-menu-item-text">Hakkımızda</span></a>
+
+                        </li>
+
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="Products"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-884 qodef-menu-item--narrow">
+                            <a><span class="qodef-menu-item-text">Ürünler</span></a>
+                            <div class="qodef-drop-down-second">
+                                <div class="qodef-drop-down-second-inner">
+                                    <ul class="sub-menu">
+                                        @foreach (var urun in Model)
+                                        {
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-885"><a href="about-us/index.html"><span class="qodef-menu-item-text">@urun.ustbaslik</span></a></li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="Contact"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-895 qodef-menu-item--wide">
+                            <a href="@Url.Action("Iletisim","Default")"><span class="qodef-menu-item-text">İletişim</span></a>
+
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+            </div>
+
+
+            <div class="qodef-header-sticky">
+                <div class="qodef-header-sticky-inner qodef-content-grid">
+                    <a itemprop="url" class="qodef-header-logo-link qodef-height--set" href="index.html" style="height:58px" rel="home">
+                        <img width="330" height="116" src="~/Content/wp-content/uploads/2020/07/logo_main.png" class="qodef-header-logo-image qodef--main" alt="logo main" itemprop="image" srcset="~/Content/wp-content/uploads/2020/07/logo_main.png 330w, ~/Content/wp-content/uploads/2020/07/logo_main.png 300w" sizes="(max-width: 330px) 100vw, 330px" /> <img width="330" height="116" src="~/Content/wp-content/uploads/2020/07/logo_main.png" class="qodef-header-logo-image qodef--dark" alt="logo dark" itemprop="image" srcset="~/Content/wp-content/uploads/2020/07/logo_main.png 330w, ~/Content/wp-content/uploads/2020/07/logo_main.png 300w" sizes="(max-width: 330px) 100vw, 330px" /> <img width="330" height="116" src="~/Content/wp-content/uploads/2020/07/logo_main.png" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image" srcset="~/Content/wp-content/uploads/2020/07/logo_main.png 330w, ~/Content/wp-content/uploads/2020/07/logo_main.png 300w" sizes="(max-width: 330px) 100vw, 330px" />
+                    </a>
+
+
+                    <nav class="qodef-header-navigation" role="navigation" aria-label="Top Menu">
+                        <ul id="menu-centered-2" class="menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="MainPage"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-875 qodef-menu-item--narrow">
+                                <a href="@Url.Action("Index","Default")"><span class="qodef-menu-item-text">Anasayfa</span></a>
+
+                            </li>
+
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="About"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-884 qodef-menu-item--narrow">
+                                <a href="@Url.Action("Hakkimizda","Default")"><span class="qodef-menu-item-text">Hakkımızda</span></a>
+
+                            </li>
+
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="Products"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-884 qodef-menu-item--narrow">
+                                <a><span class="qodef-menu-item-text">Ürünler</span></a>
+                                <div class="qodef-drop-down-second" style="visibility: hidden; height: 0px; opacity: 0; overflow: hidden;">
+                                    <div class="qodef-drop-down-second-inner">
+                                        <ul class="sub-menu">
+                                            @foreach (var urun in Model)
+                                            {
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-885"><a href="about-us/index.html"><span class="qodef-menu-item-text">@urun.ustbaslik</span></a></li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="Contact"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-2471 qodef-menu-item--wide">
+                                <a href="@Url.Action("Contact","Default")"><span class="qodef-menu-item-text">İletişim</span></a>
+
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+        </header>
+
+
+
+        <header id="qodef-page-mobile-header">
+            <div id="qodef-page-mobile-header-inner">
+                <a itemprop="url" class="qodef-mobile-header-logo-link" href="index.html" style="height:58px" rel="home">
+                    <img width="330" height="116" src="~/Content/wp-content/uploads/2020/07/logo_main.png" class="qodef-header-logo-image qodef--main" alt="logo main" itemprop="image" srcset="~/Content/wp-content/uploads/2020/07/logo_main.png 330w, ~/Content/wp-content/uploads/2020/07/logo_mainpng-300x105.png 300w" sizes="(max-width: 330px) 100vw, 330px" />
+                </a> <div class="qodef-widget-holder">
+                    <div id="konsept_core_woo_side_area_cart-6" class="widget widget_konsept_core_woo_side_area_cart qodef-mobile-header-widget-area-one" data-area="mobile-header">
+                        <div class="qodef-woo-side-area-cart qodef-m" style="padding: 0px 0px 0px 0px">
+                            <div class="qodef-woo-side-area-cart-inner qodef-m-inner">
+                                <a class="qodef-m-opener" href="javascript: void(0)">
+                                    <span class="qodef-m-opener-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="qodef-dropdown-cart-svg" width="19.816" height="18" viewBox="51.878 -0.952 19.816 18"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"><path d="M57.33-.197L54.843 3.12v11.61c0 .916.742 1.658 1.659 1.658h11.609c.917 0 1.659-.742 1.659-1.658V3.12L67.283-.197H57.33zM54.843 3.12h14.928M65.624 6.438a3.317 3.317 0 11-6.634 0" /></g></svg>
+                                    </span>
+                                    <span class="qodef-m-opener-count">0</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="qodef-mobile-header-opener" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.229px" height="13.188px" viewBox="0 0 28.229 13.188" enable-background="new 0 0 28.229 13.188" xml:space="preserve">
+<line fill="none" stroke="#1D1D1D" stroke-miterlimit="10" x1="0.122" y1="0.552" x2="17.059" y2="0.552" />
+
+
+
+<line fill="none" stroke="#1D1D1D" stroke-miterlimit="10" x1="18.934" y1="0.552" x2="28.087" y2="0.552" />
+
+
+
+<line fill="none" stroke="#1D1D1D" stroke-miterlimit="10" x1="28.087" y1="6.589" x2="11.149" y2="6.589" />
+
+
+
+<line fill="none" stroke="#1D1D1D" stroke-miterlimit="10" x1="28.087" y1="12.625" x2="0.122" y2="12.625" />
+
+
+
+<line fill="none" stroke="#1D1D1D" stroke-miterlimit="10" x1="9.274" y1="6.589" x2="0.122" y2="6.589" />
+
+
+
+</svg>
+                </a>
+
+                <nav class="qodef-mobile-header-navigation" role="navigation" aria-label="Mobile Menu">
+                    <ul id="menu-mobile-menu-1" class="qodef-content-grid">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="MainPage"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-4791 qodef-menu-item--narrow">
+                            <a href="@Url.Action("Index","Default")"><span class="qodef-menu-item-text">Anasayfa</span></a>
+
+                        </li>
+
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="About"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-4801 qodef-menu-item--narrow">
+                            <a href="@Url.Action("Hakkimizda","Default")"><span class="qodef-menu-item-text">Hakkımızda</span></a>
+
+                        </li>
+
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="Products"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-4861 qodef-menu-item--narrow">
+                            <a><span class="qodef-menu-item-text">Ürünler</span></a>
+                            <div class="qodef-drop-down-second">
+                                <div class="qodef-drop-down-second-inner">
+                                    <ul class="sub-menu">
+                                        @foreach (var urun in Model)
+                                        {
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-885"><a href="about-us/index.html"><span class="qodef-menu-item-text">@urun.ustbaslik</span></a></li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom @(ViewBag.Title=="Contact"?"current-menu-ancestor current-menu-parent":"") menu-item-has-children menu-item-4902 qodef-menu-item--narrow">
+                            <a href="@Url.Action("Contact","Default")"><span class="qodef-menu-item-text">İletişim</span></a>
+
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+
+        @RenderBody()
+
+
+        <footer id="qodef-page-footer">
+            <div id="qodef-page-footer-top-area">
+                <div id="qodef-page-footer-top-area-inner" class="qodef-content-grid">
+                    <div class="qodef-grid qodef-layout--columns qodef-responsive--custom qodef-col-num--4 qodef-col-num--1024--2 qodef-col-num--768--2 qodef-col-num--680--1 qodef-col-num--480--1">
+                        <div class="qodef-grid-inner clear">
+                            <div class="qodef-grid-item">
+                                <div id="text-5" class="widget widget_text" data-area="footer_top_area_column_1">
+                                    <h4 class="qodef-widget-title">İletişim</h4> <div class="textwidget">
+                                        <p><a href="tel:+1123456789">+90 542 807 30 91</a></p>
+                                        <p>
+                                            <a href="https://goo.gl/maps/1yYfZEcMSjKXbUvn7" target="_blank" rel="noopener noreferrer">Yenişehir, 47200 Artuklu/Mardin</a><br />
+                                            <a href="https://www.google.com/maps/search/1316+Abbot+Kinney+Blvd.+Copenhagen+CA+90291/34.9860999,-100.5448383,4z?hl" target="_blank" rel="noopener noreferrer">Copenhagen CA 90291</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div id="konsept_core_social_icons_group-4" class="widget widget_konsept_core_social_icons_group" data-area="footer_top_area_column_1">
+                                    <div class="qodef-social-icons-group">
+                                        <span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal" style="margin: -26px 12px 0 0">
+                                            <a itemprop="url" href="https://tr-tr.facebook.com/people/Burak-%C5%9Eavli/100009168610403" target="_blank">
+                                                <svg class="qodef-svg-circle"><circle cx="50%" cy="50%" r="49%"></circle></svg>
+                                                <span class="qodef-icon-font-awesome fab fa-facebook qodef-icon qodef-e" style=""></span>
+                                            </a>
+                                        </span><span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal" style="margin: -26px 12px 0 0">
+                                            <a itemprop="url" href="https://www.instagram.com/hakmobilyadekorasyon" target="_blank">
+                                                <svg class="qodef-svg-circle"><circle cx="50%" cy="50%" r="49%"></circle></svg>
+                                                <span class="qodef-icon-font-awesome fab fa-instagram qodef-icon qodef-e" style=""></span>
+                                            </a>
+                                        </span><span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal" style="margin: -26px 12px 0 0">
+                                            <a itemprop="url" href="https://twitter.com/bsavli98" target="_blank">
+                                                <svg class="qodef-svg-circle"><circle cx="50%" cy="50%" r="49%"></circle></svg>
+                                                <span class="qodef-icon-font-awesome fab fa-twitter qodef-icon qodef-e" style=""></span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="qodef-grid-item">
+                                <div id="text-5" class="widget widget_text" data-area="footer_top_area_column_1">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12692.111295798064!2d40.7201385!3d37.3181686!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xab5ef372e748a09a!2sHak%20Mobilya%20Dekorasyon!5e0!3m2!1str!2str!4v1606313503441!5m2!1str!2str" width="900" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                    
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="qodef-page-footer-bottom-area">
+                <div id="qodef-page-footer-bottom-area-inner" class="qodef-content-grid">
+                    <div class="qodef-grid qodef-layout--columns qodef-responsive--custom qodef-col-num--2 qodef-col-num--680--1 qodef-col-num--480--1">
+                        <div class="qodef-grid-inner clear">
+                            <div class="qodef-grid-item">
+                                <div id="text-9" class="widget widget_text" data-area="footer_bottom_area_column_1">
+                                    <div class="textwidget">
+                                        <p><em>Copyright © <a href="#" rel="noopener noreferrer">HakMobilya Dekorasyon</a></em></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </footer>
+
+        <a id="qodef-back-to-top" href="#">
+            <span class="qodef-back-to-top-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10.749" height="19.997" viewBox="23.25 0 10.749 19.997"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M33.232 19.181l-9.215-9.215L33.232.75" /><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M33.232 19.181l-9.215-9.215L33.232.75" /></svg>
+            </span>
+        </a>
+
+        <div id="qodef-side-area">
+            <a href="javascript:void(0)" id="qodef-side-area-close" class="qodef-opener-icon qodef-m qodef-source--svg-path">
+                <span class="qodef-m-icon qodef--open">
+                </span>
+            </a> <div id="qodef-side-area-inner">
+                <div id="media_image-6" class="widget widget_media_image" data-area="side-area"><a href="https://qodeinteractive.com/"><img width="165" height="58" src="~/Content/wp-content/uploads/2020/06/logo-sidearea.png" class="image wp-image-6220  attachment-full size-full" alt="s" style="max-width: 100%; height: auto;" /></a></div><div id="konsept_core_separator-15" class="widget widget_konsept_core_separator" data-area="side-area">
+                    <div class="qodef-shortcode qodef-m  qodef-separator clear ">
+                        <div class="qodef-m-line" style="width: 0px;border-bottom-width: 0px;margin-bottom: 15px"></div>
+                    </div>
+                </div><div id="text-13" class="widget widget_text" data-area="side-area">
+                    <div class="textwidget">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo.</p>
+                    </div>
+                </div><div id="konsept_core_separator-16" class="widget widget_konsept_core_separator" data-area="side-area">
+                    <div class="qodef-shortcode qodef-m  qodef-separator clear ">
+                        <div class="qodef-m-line" style="width: 0px;border-bottom-width: 0px;margin-top: 17px"></div>
+                    </div>
+                </div><div id="text-15" class="widget widget_text" data-area="side-area">
+                    <div class="textwidget">
+                        <div class="qodef-shortcode qodef-m  qodef-image-gallery qodef-swiper-has-bullets   qodef-grid qodef-layout--columns  qodef-gutter--tiny qodef-col-num--3  qodef-responsive--predefined">
+                            <div class="qodef-grid-inner clear">
+                                <div class="qodef-e qodef-image-wrapper qodef-grid-item">
+                                    <img width="600" height="602" src="~/Content/wp-content/uploads/2020/07/insta.png" class="attachment-full size-full" alt="s" srcset="~/Content/wp-content/uploads/2020/07/insta.png 600w, ~/Content/wp-content/uploads/2020/07/insta-300x300.png 300w, ~/Content/wp-content/uploads/2020/07/insta-150x150.png 150w, ~/Content/wp-content/uploads/2020/07/insta-100x100.png 100w" sizes="(max-width: 600px) 100vw, 600px" />
+                                </div><div class="qodef-e qodef-image-wrapper qodef-grid-item">
+                                    <img width="600" height="602" src="~/Content/wp-content/uploads/2020/07/insta-1.jpg" class="attachment-full size-full" alt="s" srcset="~/Content/wp-content/uploads/2020/07/insta-1.jpg 600w, ~/Content/wp-content/uploads/2020/07/insta-1-300x300.jpg 300w, ~/Content/wp-content/uploads/2020/07/insta-1-150x150.jpg 150w, ~/Content/wp-content/uploads/2020/07/insta-1-100x100.jpg 100w" sizes="(max-width: 600px) 100vw, 600px" />
+                                </div><div class="qodef-e qodef-image-wrapper qodef-grid-item">
+                                    <img width="600" height="602" src="~/Content/wp-content/uploads/2020/07/insta2.png" class="attachment-full size-full" alt="s" srcset="~/Content/wp-content/uploads/2020/07/insta2.png 600w, ~/Content/wp-content/uploads/2020/07/insta2-300x300.png 300w, ~/Content/wp-content/uploads/2020/07/insta2-150x150.png 150w, ~/Content/wp-content/uploads/2020/07/insta2-100x100.png 100w" sizes="(max-width: 600px) 100vw, 600px" />
+                                </div><div class="qodef-e qodef-image-wrapper qodef-grid-item">
+                                    <img width="600" height="602" src="~/Content/wp-content/uploads/2020/07/insta-3.jpg" class="attachment-full size-full" alt="s" srcset="~/Content/wp-content/uploads/2020/07/insta-3.jpg 600w, ~/Content/wp-content/uploads/2020/07/insta-3-300x300.jpg 300w, ~/Content/wp-content/uploads/2020/07/insta-3-150x150.jpg 150w, ~/Content/wp-content/uploads/2020/07/insta-3-100x100.jpg 100w" sizes="(max-width: 600px) 100vw, 600px" />
+                                </div><div class="qodef-e qodef-image-wrapper qodef-grid-item">
+                                    <img width="600" height="602" src="~/Content/wp-content/uploads/2020/07/insta4.png" class="attachment-full size-full" alt="s" srcset="~/Content/wp-content/uploads/2020/07/insta4.png 600w, ~/Content/wp-content/uploads/2020/07/insta4-300x300.png 300w, ~/Content/wp-content/uploads/2020/07/insta4-150x150.png 150w, ~/Content/wp-content/uploads/2020/07/insta4-100x100.png 100w" sizes="(max-width: 600px) 100vw, 600px" />
+                                </div><div class="qodef-e qodef-image-wrapper qodef-grid-item">
+                                    <img width="600" height="602" src="~/Content/wp-content/uploads/2020/07/insta-5.jpg" class="attachment-full size-full" alt="s" srcset="~/Content/wp-content/uploads/2020/07/insta-5.jpg 600w, ~/Content/wp-content/uploads/2020/07/insta-5-300x300.jpg 300w, ~/Content/wp-content/uploads/2020/07/insta-5-150x150.jpg 150w, ~/Content/wp-content/uploads/2020/07/insta-5-100x100.jpg 100w" sizes="(max-width: 600px) 100vw, 600px" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div id="konsept_core_separator-19" class="widget widget_konsept_core_separator" data-area="side-area">
+                    <div class="qodef-shortcode qodef-m  qodef-separator clear ">
+                        <div class="qodef-m-line" style="width: 0px;border-bottom-width: 0px;margin-top: 20px"></div>
+                    </div>
+                </div><div id="text-14" class="widget widget_text" data-area="side-area">
+                    <h4 class="qodef-widget-title">Contact</h4> <div class="textwidget">
+                        <p>
+                            <a href="tel:+1123456789">+112 345 6789</a><br />
+                            <a href="https://www.google.com/maps/search/1316+Abbot+Kinney+Blvd.+Copenhagen+CA+90291/34.9860999,-100.5448383,4z?hl" target="_blank" rel="noopener noreferrer">1316 Abbot Kinney Blvd.</a><br />
+                            <a href="https://www.google.com/maps/search/1316+Abbot+Kinney+Blvd.+Copenhagen+CA+90291/34.9860999,-100.5448383,4z?hl" target="_blank" rel="noopener noreferrer">Copenhagen CA 90291</a>
+                        </p>
+                    </div>
+                </div><div id="konsept_core_social_icons_group-3" class="widget widget_konsept_core_social_icons_group" data-area="side-area">
+                    <div class="qodef-social-icons-group">
+                        <span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal">
+                            <a itemprop="url" href="https://www.facebook.com/QodeInteractive/" target="_blank">
+                                <svg class="qodef-svg-circle"><circle cx="50%" cy="50%" r="49%"></circle></svg>
+                                <span class="qodef-icon-font-awesome fab fa-facebook qodef-icon qodef-e" style=""></span>
+                            </a>
+                        </span><span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal">
+                            <a itemprop="url" href="https://www.instagram.com/qodeinteractive/" target="_blank">
+                                <svg class="qodef-svg-circle"><circle cx="50%" cy="50%" r="49%"></circle></svg>
+                                <span class="qodef-icon-font-awesome fab fa-instagram qodef-icon qodef-e" style=""></span>
+                            </a>
+                        </span><span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal">
+                            <a itemprop="url" href="https://twitter.com/QodeInteractive" target="_blank">
+                                <svg class="qodef-svg-circle"><circle cx="50%" cy="50%" r="49%"></circle></svg>
+                                <span class="qodef-icon-font-awesome fab fa-twitter qodef-icon qodef-e" style=""></span>
+                            </a>
+                        </span><span class="qodef-shortcode qodef-m  qodef-icon-holder  qodef-layout--normal">
+                            <a itemprop="url" href="https://www.youtube.com/QodeInteractiveVideos" target="_blank">
+                                <svg class="qodef-svg-circle"><circle cx="50%" cy="50%" r="49%"></circle></svg>
+                                <span class="qodef-icon-font-awesome fab fa-youtube qodef-icon qodef-e" style=""></span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="qodef-subscribe-popup-modal" class="qodef-sp-holder qodef-sp-disable-bg-mobile qodef-sp-prevent-session">
+            <div class="qodef-sp-inner">
+                <a class="qodef-sp-close" href="javascript:void(0)">X</a>
+                <div class="qodef-sp-content-container" style="background-image: url(~/Content/wp-content/uploads/2020/06/Newsletter.jpg)">
+                    <h4 class="qodef-sp-title">
+                        subscribe to newsletter
+                    </h4>
+                    <div class="qodef-sp-subtitle">
+                        Subscribe now and get 10% off new collection
+                    </div>
+                    <div role="form" class="wpcf7" id="wpcf7-f188-o1" lang="en-US" dir="ltr">
+                        <div class="screen-reader-response" role="alert" aria-live="polite"></div>
+                        <form action="https://konsept.qodeinteractive.com/#wpcf7-f188-o1" method="post" class="wpcf7-form init" novalidate="novalidate">
+                            <div style="display: none;">
+                                <input type="hidden" name="_wpcf7" value="188" />
+                                <input type="hidden" name="_wpcf7_version" value="5.2" />
+                                <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f188-o1" />
+                                <input type="hidden" name="_wpcf7_container_post" value="0" />
+                                <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                            </div>
+                            <div class="qodef-newsletter-form"><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your email here" /></span><button type="submit" class="qodef-button qodef-layout--textual"><span class="qodef-m-text">Subscribe</span></button></div>
+                            <div class="wpcf7-response-output" role="alert" aria-hidden="true"></div>
+                        </form>
+                    </div>
+                    <div class="qodef-sp-prevent">
+                        <div class="qodef-sp-prevent-inner">
+                            <span class="qodef-sp-prevent-input" data-value="no">
+                                <svg x="0px" y="0px" width="10.656px" height="10.692px" viewBox="0 0 10.656 10.692" enable-background="new 0 0 10.656 10.692" xml:space="preserve">
+<path d="M10.415,9.752c0.252,0.254,0.303,0.611,0.114,0.8l0,0c-0.188,0.188-0.545,0.136-0.798-0.118L0.242,0.913 C-0.011,0.658-0.062,0.3,0.127,0.111l0,0C0.316-0.075,0.673-0.023,0.926,0.23L10.415,9.752z" />
+
+
+
+<path d="M0.229,9.779c-0.253,0.253-0.305,0.609-0.117,0.799l0,0c0.188,0.189,0.545,0.138,0.799-0.115l9.515-9.495 c0.253-0.254,0.305-0.611,0.117-0.801l0,0C10.355-0.021,9.998,0.03,9.744,0.283L0.229,9.779z" />
+
+
+
+</svg>
+                            </span>
+                            <label class="qodef-sp-prevent-label">Prevent This Pop-up</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="rbt-toolbar" data-theme="Konsept" data-featured="" data-button-position="26%" data-button-horizontal="right" data-button-alt="no"></div>
+
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLJLSX7"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <script type="text/javascript">
+        var sbiajaxurl = "wp-admin/admin-ajax.html";
+    </script>
+    <div id="yith-quick-view-modal">
+        <div class="yith-quick-view-overlay"></div>
+        <div class="yith-wcqv-wrapper">
+            <div class="yith-wcqv-main">
+                <div class="yith-wcqv-head">
+                    <a href="#" id="yith-quick-view-close" class="yith-wcqv-close">X</a>
+                </div>
+                <div id="yith-quick-view-content" class="woocommerce single-product"></div>
+            </div>
+        </div>
+    </div>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600%7CRoboto:400%7COpen+Sans:400" rel="stylesheet" property="stylesheet" media="all" type="text/css">
+    <script type="text/javascript">
+        var c = document.body.className;
+        c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+        document.body.className = c;
+    </script>
+    <script type="text/javascript">
+        if (typeof revslider_showDoubleJqueryError === "undefined") {
+            function revslider_showDoubleJqueryError(sliderID) {
+                var err = "<div class='rs_error_message_box'>";
+                err += "<div class='rs_error_message_oops'>Oops...</div>";
+                err += "<div class='rs_error_message_content'>";
+                err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
+                err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
+                err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
+                err += "</div>";
+                err += "</div>";
+                var slider = document.getElementById(sliderID); slider.innerHTML = err; slider.style.display = "block";
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        if (typeof revslider_showDoubleJqueryError === "undefined") {
+            function revslider_showDoubleJqueryError(sliderID) {
+                var err = "<div class='rs_error_message_box'>";
+                err += "<div class='rs_error_message_oops'>Oops...</div>";
+                err += "<div class='rs_error_message_content'>";
+                err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
+                err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
+                err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
+                err += "</div>";
+                err += "</div>";
+                var slider = document.getElementById(sliderID); slider.innerHTML = err; slider.style.display = "block";
+            }
+        }
+    </script>
+    <link rel='stylesheet' id='mediaelement-css' href='~/Content/wp-includes/js/mediaelement/mediaelementplayer-legacy.minc270.css?ver=4.2.13-9993131' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-mediaelement-css' href='~/Content/wp-includes/js/mediaelement/wp-mediaelement.min7263.css?ver=5.4.4' type='text/css' media='all' />
+    <script type='text/javascript' src='~/Content/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.selectBox.min7359.js?ver=1.2.0'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var yith_wcwl_l10n = { "ajax_url": "\/wp-admin\/admin-ajax.php", "redirect_to_cart": "no", "multi_wishlist": "", "hide_add_button": "1", "enable_ajax_loading": "", "ajax_loader_url": "https:\/\/konsept.qodeinteractive.com\/~/Content/wp-content\/plugins\/yith-woocommerce-wishlist\/assets\/images\/ajax-loader-alt.svg", "remove_from_wishlist_after_add_to_cart": "1", "is_wishlist_responsive": "1", "labels": { "cookie_disabled": "We are sorry, but this feature is available only if cookies on your browser are enabled.", "added_to_cart_message": "<div class=\"woocommerce-notices-wrapper\"><div class=\"woocommerce-message\" role=\"alert\">Product added to cart successfully<\/div><\/div>" }, "actions": { "add_to_wishlist_action": "add_to_wishlist", "remove_from_wishlist_action": "remove_from_wishlist", "reload_wishlist_and_adding_elem_action": "reload_wishlist_and_adding_elem", "load_mobile_action": "load_mobile", "delete_item_action": "delete_item", "save_title_action": "save_title", "save_privacy_action": "save_privacy", "load_fragments": "load_fragments" } };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl9b4a.js?ver=3.0.11'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wpcf7 = { "apiSettings": { "root": "https:\/\/konsept.qodeinteractive.com\/wp-json\/contact-form-7\/v1", "namespace": "contact-form-7\/v1" } };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/contact-form-7/includes/js/scripts5fba.js?ver=5.2'></script>
+    <script type='text/javascript' src='../export.qodethemes.com/_toolbar/assets/js/rbt-modules7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_add_to_cart_params = { "ajax_url": "\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View cart", "cart_url": "https:\/\/konsept.qodeinteractive.com\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min5b31.js?ver=4.3.1'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b25.js?ver=2.1.4'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var woocommerce_params = { "ajax_url": "\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min5b31.js?ver=4.3.1'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_cart_fragments_params = { "ajax_url": "\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%", "cart_hash_key": "wc_cart_hash_7dfe7e93339b2b71e82217a2674ca5c1", "fragment_name": "wc_fragments_7dfe7e93339b2b71e82217a2674ca5c1", "request_timeout": "5000" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min5b31.js?ver=4.3.1'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/konsept-core/assets/plugins/perfect-scrollbar/perfect-scrollbar.jquery.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/hoverIntent.minc245.js?ver=1.8.1'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/jquery/ui/core.mine899.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/konsept-core/assets/plugins/jquery/jquery.easing.1.37263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/konsept-core/assets/plugins/modernizr/modernizr7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/konsept-core/assets/plugins/tweenmax/tweenmax.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var qodefGlobal = { "vars": { "adminBarHeight": 0, "qodefStickyHeaderScrollAmount": 850, "topAreaHeight": 35, "restUrl": "https:\/\/konsept.qodeinteractive.com\/wp-json\/", "restNonce": "6857bb1178", "wishlistRestRoute": "konsept\/v1\/wishlist", "loginModalRestRoute": "konsept\/v1\/login-modal", "loginModalGetRestRoute": "konsept\/v1\/login-modal-get", "paginationRestRoute": "konsept\/v1\/get-posts", "wishlistDropdownRestRoute": "konsept\/v1\/wishlistdropdown", "headerHeight": 175, "mobileHeaderHeight": 70 } };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/themes/konsept/assets/js/main.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?key=AIzaSyC5FaV-F_4wF6rNp4jQOLqCk_uKfATvskU&amp;ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/underscore.min4511.js?ver=1.8.3'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/konsept-core/inc/maps/assets/js/custom-marker7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/konsept-core/inc/maps/assets/js/markerclusterer7263.js?ver=5.4.4'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var qodefMapsVariables = { "global": { "mapStyle": [{ "featureType": "administrative", "elementType": "labels.text.fill", "stylers": [{ "color": "#6195a0" }] }, { "featureType": "landscape", "elementType": "all", "stylers": [{ "color": "#f2f2f2" }] }, { "featureType": "landscape", "elementType": "geometry.fill", "stylers": [{ "color": "#ffffff" }] }, { "featureType": "poi", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [{ "color": "#e6f3d6" }, { "visibility": "on" }] }, { "featureType": "road", "elementType": "all", "stylers": [{ "saturation": -100 }, { "lightness": 45 }, { "visibility": "simplified" }] }, { "featureType": "road.highway", "elementType": "all", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#f4d2c5" }, { "visibility": "simplified" }] }, { "featureType": "road.highway", "elementType": "labels.text", "stylers": [{ "color": "#4e4e4e" }] }, { "featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{ "color": "#f4f4f4" }] }, { "featureType": "road.arterial", "elementType": "labels.text.fill", "stylers": [{ "color": "#787878" }] }, { "featureType": "road.arterial", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "color": "#eaf6f8" }, { "visibility": "on" }] }, { "featureType": "water", "elementType": "geometry.fill", "stylers": [{ "color": "#eaf6f8" }] }], "mapZoom": 12, "mapScrollable": false, "mapDraggable": true, "streetViewControl": true, "zoomControl": true, "mapTypeControl": true, "fullscreenControl": true }, "multiple": [] };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/konsept-core/inc/maps/assets/js/google-map7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/konsept-core/assets/js/konsept-core.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/jquery/ui/widget.mine899.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/jquery/ui/tabs.mine899.js?ver=1.11.4'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var konseptMembershipGlobal = [];
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/konsept-membership/assets/js/konsept-membership.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var _wpUtilSettings = { "ajax": { "url": "\/wp-admin\/admin-ajax.php" } };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/wp-util.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_add_to_cart_variation_params = { "wc_ajax_url": "\/?wc-ajax=%%endpoint%%", "i18n_no_matching_variations_text": "Sorry, no products matched your selection. Please choose a different combination.", "i18n_make_a_selection_text": "Please select some product options before adding this product to your cart.", "i18n_unavailable_text": "Sorry, this product is unavailable. Please choose a different combination." };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min5b31.js?ver=4.3.1'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var yith_wccl_general = { "ajaxurl": "\/?wc-ajax=%%endpoint%%", "actionAddCart": "yith_wccl_add_to_cart", "actionVariationGallery": "yith_wccl_variation_gallery", "cart_redirect": "", "cart_url": "https:\/\/konsept.qodeinteractive.com\/cart\/", "view_cart": "View Cart", "tooltip": "1", "tooltip_pos": "top", "tooltip_ani": "fade", "description": "1", "add_cart": "Add to cart", "grey_out": "", "image_hover": "", "wrapper_container_shop": "li.product", "image_selector": "img.wp-post-image, img.attachment-woocommerce_thumbnail", "enable_handle_variation_gallery": "1", "plugin_compatibility_selectors": "yith-wcan-ajax-filtered yith_infs_adding_elem initialized.owl.carousel post-load ajax-tab-loaded", "single_gallery_selector": ".woocommerce-product-gallery" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/yith-woocommerce-color-label-variations-premium/assets/js/yith-wccl.mindb08.js?ver=1.10.3'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var yith_qv = { "ajaxurl": "\/wp-admin\/admin-ajax.php", "loader": "https:\/\/konsept.qodeinteractive.com\/~/Content/wp-content\/plugins\/yith-woocommerce-quick-view\/assets\/image\/qv-loader.gif", "lang": "" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/yith-woocommerce-quick-view/assets/js/frontend.min1159.js?ver=1.4.2'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min005e.js?ver=3.1.6'></script>
+    <script type='text/javascript' src='~/Content/wp-content/themes/konsept/assets/plugins/waitforimages/jquery.waitforimages7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/themes/konsept/assets/plugins/appear/jquery.appear7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/elementor/assets/lib/swiper/swiper.min48f5.js?ver=5.3.6'></script>
+    <script type='text/javascript' src='~/Content/wp-content/themes/konsept/assets/plugins/magnific-popup/jquery.magnific-popup.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/select2/select2.full.minfa0c.js?ver=4.0.3'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/wp-embed.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/themes/konsept/inc/masonry/assets/js/plugins/isotope.pkgd.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/themes/konsept/inc/masonry/assets/js/plugins/packery-mode.pkgd.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript'>
+        var mejsL10n = { "language": "en", "strings": { "mejs.download-file": "Download File", "mejs.install-flash": "You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/", "mejs.fullscreen": "Fullscreen", "mejs.play": "Play", "mejs.pause": "Pause", "mejs.time-slider": "Time Slider", "mejs.time-help-text": "Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.", "mejs.live-broadcast": "Live Broadcast", "mejs.volume-help-text": "Use Up\/Down Arrow keys to increase or decrease volume.", "mejs.unmute": "Unmute", "mejs.mute": "Mute", "mejs.volume-slider": "Volume Slider", "mejs.video-player": "Video Player", "mejs.audio-player": "Audio Player", "mejs.captions-subtitles": "Captions\/Subtitles", "mejs.captions-chapters": "Chapters", "mejs.none": "None", "mejs.afrikaans": "Afrikaans", "mejs.albanian": "Albanian", "mejs.arabic": "Arabic", "mejs.belarusian": "Belarusian", "mejs.bulgarian": "Bulgarian", "mejs.catalan": "Catalan", "mejs.chinese": "Chinese", "mejs.chinese-simplified": "Chinese (Simplified)", "mejs.chinese-traditional": "Chinese (Traditional)", "mejs.croatian": "Croatian", "mejs.czech": "Czech", "mejs.danish": "Danish", "mejs.dutch": "Dutch", "mejs.english": "English", "mejs.estonian": "Estonian", "mejs.filipino": "Filipino", "mejs.finnish": "Finnish", "mejs.french": "French", "mejs.galician": "Galician", "mejs.german": "German", "mejs.greek": "Greek", "mejs.haitian-creole": "Haitian Creole", "mejs.hebrew": "Hebrew", "mejs.hindi": "Hindi", "mejs.hungarian": "Hungarian", "mejs.icelandic": "Icelandic", "mejs.indonesian": "Indonesian", "mejs.irish": "Irish", "mejs.italian": "Italian", "mejs.japanese": "Japanese", "mejs.korean": "Korean", "mejs.latvian": "Latvian", "mejs.lithuanian": "Lithuanian", "mejs.macedonian": "Macedonian", "mejs.malay": "Malay", "mejs.maltese": "Maltese", "mejs.norwegian": "Norwegian", "mejs.persian": "Persian", "mejs.polish": "Polish", "mejs.portuguese": "Portuguese", "mejs.romanian": "Romanian", "mejs.russian": "Russian", "mejs.serbian": "Serbian", "mejs.slovak": "Slovak", "mejs.slovenian": "Slovenian", "mejs.spanish": "Spanish", "mejs.swahili": "Swahili", "mejs.swedish": "Swedish", "mejs.tagalog": "Tagalog", "mejs.thai": "Thai", "mejs.turkish": "Turkish", "mejs.ukrainian": "Ukrainian", "mejs.vietnamese": "Vietnamese", "mejs.welsh": "Welsh", "mejs.yiddish": "Yiddish" } };
+    </script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/mediaelement/mediaelement-and-player.minc270.js?ver=4.2.13-9993131'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/mediaelement/mediaelement-migrate.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var _wpmejsSettings = { "pluginPath": "\/~/Content/wp-includes\/js\/mediaelement\/", "classPrefix": "mejs-", "stretching": "responsive" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/mediaelement/wp-mediaelement.min7263.js?ver=5.4.4'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/mediaelement/renderers/vimeo.minc270.js?ver=4.2.13-9993131'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min5a35.js?ver=1.7.21'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_single_product_params = { "i18n_required_rating_text": "Please select a rating", "review_rating_required": "yes", "flexslider": { "rtl": false, "animation": "slide", "smoothHeight": true, "directionNav": false, "controlNav": "thumbnails", "slideshow": false, "animationSpeed": 500, "animationLoop": false, "allowOneSlide": false }, "zoom_enabled": "1", "zoom_options": [], "photoswipe_enabled": "", "photoswipe_options": { "shareEl": false, "closeOnScroll": false, "history": false, "hideAnimationDuration": 0, "showAnimationDuration": 0 }, "flexslider_enabled": "" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min5b31.js?ver=4.3.1'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/elementor/assets/js/frontend-modules.mincaa5.js?ver=2.9.13'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/jquery/ui/position.mine899.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/elementor/assets/lib/dialog/dialog.minae9e.js?ver=4.7.6'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/elementor/assets/lib/share-link/share-link.mincaa5.js?ver=2.9.13'></script>
+    <script type='text/javascript'>
+        var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "downloadImage": "Download image" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "version": "2.9.13", "urls": { "assets": "https:\/\/konsept.qodeinteractive.com\/~/Content/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "general": { "elementor_lightbox_enable_counter": "yes", "elementor_lightbox_enable_fullscreen": "yes", "elementor_lightbox_enable_zoom": "yes", "elementor_lightbox_enable_share": "yes", "elementor_lightbox_title_src": "title", "elementor_lightbox_description_src": "description" }, "editorPreferences": [] }, "post": { "id": 13, "title": "Konsept%20%E2%80%93%20Furniture%20Store%20Theme", "excerpt": "", "featuredImage": false } };
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/elementor/assets/js/frontend.mincaa5.js?ver=2.9.13'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var qodefElementorGlobal = { "vars": { "elementorSectionHandler": [] } };
+/* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/konsept-core/inc/plugins/elementor/assets/js/elementor7263.js?ver=5.4.4'></script>
+    <div id="konsept-core-page-inline-style" data-style="{.qodef-custom-font-13 { font-size: 45px!important;line-height: 55px!important;}.qodef-custom-font-14 { font-size: 45px!important;line-height: 55px!important;}.qodef-custom-font-15 { font-size: 45px!important;line-height: 55px!important;}}"></div>
+</body>
+
+</html>

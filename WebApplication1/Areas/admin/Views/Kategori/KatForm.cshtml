@@ -1,0 +1,17 @@
+﻿@model WebApplication1.Models.kategori
+@{
+    ViewBag.Title = "KatForm";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="container">
+        <h2>Kategoriler Form Syafası</h2>
+        @using (Html.BeginForm("Kaydet", "Kategori", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            @Html.TextBoxFor(m => m.ad, new { @class = "form-control", autofocus = "autofocus" })
+            @Html.HiddenFor(m => m.id)
+            <input type="submit" value="Kaydet" class="btn btn-primary" />
+        }
+    </div>
+</div>

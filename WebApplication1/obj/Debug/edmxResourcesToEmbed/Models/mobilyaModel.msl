@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mobilyaModelStoreContainer" CdmEntityContainer="mobilyaEntities1">
+    <EntitySetMapping Name="hakkimizda">
+      <EntityTypeMapping TypeName="mobilyaModel.hakkimizda">
+        <MappingFragment StoreEntitySet="hakkimizda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="ustbaslik" ColumnName="ustbaslik" />
+          <ScalarProperty Name="icerik" ColumnName="icerik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanicilar">
+      <EntityTypeMapping TypeName="mobilyaModel.kullanicilar">
+        <MappingFragment StoreEntitySet="kullanicilar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kad" ColumnName="kad" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urunler">
+      <EntityTypeMapping TypeName="mobilyaModel.urunler">
+        <MappingFragment StoreEntitySet="urunler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="ustbaslik" ColumnName="ustbaslik" />
+          <ScalarProperty Name="icerik" ColumnName="icerik" />
+          <ScalarProperty Name="aktif" ColumnName="aktif" />
+          <ScalarProperty Name="sira" ColumnName="sira" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

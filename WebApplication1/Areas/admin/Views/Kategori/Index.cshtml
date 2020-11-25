@@ -1,0 +1,150 @@
+﻿@model List<WebApplication1.Models.kategori>
+
+@{
+    ViewBag.Title = "Kategori";
+    Layout = "~/Areas/admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@if (TempData["kategori"] != null)
+{
+    <link href="~/Content/admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css" rel="stylesheet" />
+    <script src="~/Content/admin/plugins/sweetalert2/sweetalert2.min.js">
+    </script>
+
+    <script>
+        Swal.fire("Başarılı", " @TempData["Kategori"] ", 'success');
+    </script>
+}
+
+@if (TempData["kategoriHata"] != null)
+{
+    <link href="~/Content/admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css" rel="stylesheet" />
+    <script src="~/Content/admin/plugins/sweetalert2/sweetalert2.min.js">
+    </script>
+
+    <script>
+        Swal.fire("Hata!", " @TempData["KategoriHata"] ", 'error');
+    </script>
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Kategorilere Sayfası</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Dashbord</a></li>
+                        <li class="breadcrumb-item active">Kategoriler</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+
+
+                <div class="card">
+                    <div class="card-header">
+                        @Html.ActionLink("Yeni Kategori Ekle", "Yeni", null, new { @class = "btn btn-primary mx-4" })
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Kategori Adı</th>
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var kat in Model)
+                                {
+
+                                    <tr>
+                                        <td> @kat.ad</td>
+                                        <td>
+                                            @Html.ActionLink("Güncelle", "Guncelle", new { kat.id }, new { @class = "btn btn-info mx-4" })
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#sil_@kat.id">
+                                                Sil
+                                            </button>
+                                            <div class="modal fade" id="sil_@kat.id">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Sil</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <h4>Kategoriyi Silmek İstiyor musunuz?</h4>
+                                                        </div>
+                                                        <div class="modal-footer justify-content-between">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                                                            @Html.ActionLink("Sil", "Sil", new { kat.id }, new { @class = "btn btn-danger" })
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Kategori Adı</th>
+                                    <th>Güncelle</th>
+                                    <th>Sil</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+
+@section altTaraf
+{
+    <!-- DataTables -->
+    <script src="~/Content/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Content/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Content/admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/Content/admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });</script>
+}
+
