@@ -9,22 +9,22 @@ namespace WebApplication1.Controllers
 {
     public class DefaultController : Controller
     {
-        private List<urunler> getProducts()
+        private indexViewModel getIndexData()
         {
             using (mobilyaEntities db = new mobilyaEntities())
             {
-                var model = db.urunler.Where(x => x.aktifmi == 1).OrderBy(x => x.sira).ToList();
+                var indexData = new indexViewModel();
+                indexData.products= db.urunler.OrderBy(x => x.sira).ToList();
+                indexData.categories= db.kategori.OrderBy(x => x.id).ToList();
 
-                return model;
+                return indexData;
             }
         }
 
         // GET: Default
         public ActionResult Index()
         {
-            var model = getProducts().Reverse<urunler>().ToList();
-            
-            return View(model);
+            return View(getIndexData());
         }
 
         public ActionResult Hakkimizda()
@@ -36,38 +36,55 @@ namespace WebApplication1.Controllers
                 return View(model);
             }
             */
-            return View(getProducts());
+            return View(getIndexData());
+        }
+
+        public ActionResult Iletisim()
+        {
+            return View(getIndexData());
         }
 
         public ActionResult Urunler()
         {
-            using (mobilyaEntities db = new mobilyaEntities())
-            {
-                var model = db.urunler.Where(x => x.aktifmi == 1).OrderBy(x => x.sira).ToList();
-                return View(model);
-            }
+            return View(getIndexData());
         }
 
-        [Route("urun/{id}/{baslik}")]
+        [Route("urun/{id}")]
         public ActionResult UrunDetay(int id)
         {
+            var model = getIndexData();
+
+            var products = new List<urunler>();
+
+            foreach(var product in model.products)
+            {
+                if (product.katId == id)
+                {
+                    products.Add(product);
+                }
+            }
+            model.categoryProducts = products;
+
+            foreach(var category in model.categories)
+            {
+                if (category.id == id)
+                {
+                    ViewBag.CategoryText = category.ad;
+                }
+            }
+
+            return View(model);
+
             using (mobilyaEntities db = new mobilyaEntities())
             {
-                var model = db.urunler.Where(x => x.aktifmi == 1 && x.id == id).FirstOrDefault();
+                /*
+                var model = db.urunler.Where(x => x.id == id).FirstOrDefault();
                 if (model == null)
                 {
                     return HttpNotFound();
                 }
-
-                return View(model);
+                */
             }
-        }
-
-
-
-        public ActionResult Iletisim()
-        {
-            return View(getProducts());
         }
 
         [Route("kategori")]

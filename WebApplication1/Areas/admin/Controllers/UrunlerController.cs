@@ -82,6 +82,9 @@ namespace WebApplication1.Areas.admin.Controllers
                     if (fotoAdi.Length < 10)
                     {
                         gelenUrun.foto = fotoAdi;
+                        gelenUrun.baslik = "baslik";
+                        gelenUrun.icerik = "icerik";
+                        gelenUrun.ustbaslik = "ustbaslik";
                         db.urunler.Add(gelenUrun);
                         gelenUrun.fotoFile.SaveAs(Path.Combine(Server.MapPath("~/Content/img"), Path.GetFileName(fotoAdi)));
                         TempData["urun"] = "Ürün başarılı bir şekilde eklendi.";

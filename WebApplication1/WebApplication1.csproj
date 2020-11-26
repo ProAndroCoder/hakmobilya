@@ -367,9 +367,9 @@
     <Content Include="Content\admin\plugins\sweetalert2\sweetalert2.min.js" />
     <Content Include="Content\css\business-casual.css" />
     <Content Include="Content\css\business-casual.min.css" />
+    <Content Include="Content\css\gallery-min.css" />
     <Content Include="Content\img\about.jpg" />
     <Content Include="Content\img\bg.jpg" />
-    <Content Include="Content\img\indir.jpg" />
     <Content Include="Content\img\intro.jpg" />
     <Content Include="Content\img\products-01.jpg" />
     <Content Include="Content\img\products-02.jpg" />
@@ -642,6 +642,7 @@
     <Content Include="Content\wp-includes\js\wp-embed.min7263.js" />
     <Content Include="Content\wp-includes\js\wp-util.min7263.js" />
     <Content Include="Content\wp-includes\wlwmanifest.xml" />
+    <Content Include="Content\wp-json\gallery.js" />
     <Content Include="Content\wp-json\index.html" />
     <Content Include="Global.asax" />
     <Content Include="Models\MobilyaEntities.Context.tt">

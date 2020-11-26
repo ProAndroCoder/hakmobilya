@@ -1,27 +1,151 @@
-﻿@model WebApplication1.Models.urunler
+﻿@model WebApplication1.Models.indexViewModel
 @{
     ViewBag.Title = "Ürünler";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<section class="page-section">
-    <div class="container">
-        <div class="product-item">
-            <div class="product-item-title d-flex">
-                <div class="bg-faded p-5 d-flex ml-auto rounded">
-                    <h2 class="section-heading mb-0">
-                        <span class="section-heading-upper">@Model.ustbaslik</span>
-                        <span class="section-heading-lower">@Model.baslik</span>
-                    </h2>
+
+<div class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--center ">
+    <span class="qodef-m-tagline" style="margin-bottom: 10px">@ViewBag.CategoryText</span>
+
+</div>
+
+<div id="qodef-page-outer">
+    <div id="qodef-page-inner" class="qodef-content-full-width">
+        <main id="qodef-page-content" class="qodef-grid qodef-layout--template ">
+            <div class="qodef-grid-inner clear">
+                <div class="qodef-grid-item qodef-page-content-section qodef-col--12">
+                    <div data-elementor-type="wp-page" data-elementor-id="13" class="elementor elementor-13" data-elementor-settings="[]">
+                        <div class="elementor-inner">
+                            <div class="elementor-section-wrap">
+                                <section class="elementor-element elementor-element-d2a37ee elementor-section-full_width elementor-section-height-default elementor-section-height-default qodef-elementor-content-no elementor-section elementor-top-section" data-id="d2a37ee" data-element_type="section">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-row">
+                                            <div class="elementor-element elementor-element-ce9829d elementor-column elementor-col-100 elementor-top-column" data-id="ce9829d" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                    <div class="elementor-widget-wrap">
+                                                        <div class="elementor-element elementor-element-83dddf7 elementor-widget elementor-widget-slider_revolution" data-id="83dddf7" data-element_type="widget" data-widget_type="slider_revolution.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="wp-block-themepunch-revslider">
+                                                                    <p class="rs-p-wp-fix"></p>
+
+                                                                    <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="background:#f9f3eb;padding:0;">
+
+                                                                        <!-- Slider -->
+                                                                        <rs-module id="rev_slider_1_1" style="" data-version="6.2.12">
+                                                                            <rs-slides>
+
+                                                                                <!-- Slides-->
+                                                                                @foreach (var product in Model.categoryProducts)
+                                                                                {
+                                                                                        <rs-slide data-key="rs-@product.id" data-title="@product.baslik" data-thumb="~/Content/img/@product.foto" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
+                                                                                            <img src="~/Content/img/@product.foto" alt="a" title="@product.ustbaslik" width="1920" height="870" data-bg="p:6% 64%;" class="rev-slidebg" data-no-retina>
+
+                                                                                        </rs-slide>
+                                                                                }
+
+                                                                            </rs-slides>
+                                                                        </rs-module>
+
+
+                                                                        <script type="text/javascript">
+                                                                            setREVStartSize({ c: 'rev_slider_1_1', rl: [1920, 1720, 1025, 700], el: [870, 535, 600, 750], gw: [1240, 1024, 778, 480], gh: [870, 535, 600, 750], type: 'standard', justify: '', layout: 'fullscreen', offsetContainer: 'html.no-touchevents #qodef-page-header, html.no-touchevents #qodef-top-area, html.touchevents #qodef-page-mobile-header', offset: '', mh: "0" });
+                                                                            var revapi1,
+                                                                                tpj;
+                                                                            jQuery(function () {
+                                                                                tpj = jQuery;
+                                                                                revapi1 = tpj("#rev_slider_1_1")
+                                                                                if (revapi1 == undefined || revapi1.revolution == undefined) {
+                                                                                    revslider_showDoubleJqueryError("rev_slider_1_1");
+                                                                                } else {
+                                                                                    revapi1.revolution({
+                                                                                        sliderLayout: "fullscreen",
+                                                                                        duration: "5000ms",
+                                                                                        visibilityLevels: "1920,1720,1025,700",
+                                                                                        gridwidth: "1240,1024,778,480",
+                                                                                        gridheight: "870,535,600,750",
+                                                                                        perspective: 600,
+                                                                                        perspectiveType: "local",
+                                                                                        editorheight: "870,535,600,750",
+                                                                                        responsiveLevels: "1920,1720,1025,700",
+                                                                                        fullScreenOffsetContainer: "html.no-touchevents #qodef-page-header, html.no-touchevents #qodef-top-area, html.touchevents #qodef-page-mobile-header",
+                                                                                        progressBar: { disableProgressBar: true },
+                                                                                        navigation: {
+                                                                                            onHoverStop: false,
+                                                                                            touch: {
+                                                                                                touchenabled: true
+                                                                                            },
+                                                                                            arrows: {
+                                                                                                enable: true,
+                                                                                                tmp: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"35\" viewBox=\"23.25 0 10.749 19.997\"><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M33.232 19.181l-9.215-9.215L33.232.75\"/><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M33.232 19.181l-9.215-9.215L33.232.75\"/></svg>",
+                                                                                                style: "konsept-tp-arrows",
+                                                                                                hide_onmobile: true,
+                                                                                                hide_under: "900px",
+                                                                                                left: {
+                                                                                                    h_offset: 30
+                                                                                                },
+                                                                                                right: {
+                                                                                                    h_offset: 30
+                                                                                                }
+                                                                                            },
+                                                                                            bullets: {
+                                                                                                enable: true,
+                                                                                                tmp: "<svg class=\"qodef-svg-circle\"><circle cx=\"50%\" cy=\"50%\" r=\"45%\"></circle></svg>",
+                                                                                                style: "konsept",
+                                                                                                hide_onmobile: true,
+                                                                                                hide_under: "680px",
+                                                                                                v_offset: 35,
+                                                                                                space: ""
+                                                                                            }
+                                                                                        },
+                                                                                        fallbacks: {
+                                                                                            allowHTML5AutoPlayOnAndroid: true
+                                                                                        },
+                                                                                    });
+                                                                                }
+
+                                                                            });
+                                                                        </script>
+                                                                        <script>
+                                                                            var htmlDivCss = unescape(".konsept-tp-arrows.tparrows%3Abefore%20%7B%0A%20%20display%3Anone%7D%0A%0A.konsept-tp-arrows.tparrows%20%7B%0A%20%20display%3A%20flex%3B%0A%20%20background%3A%20none%3B%0A%20%20align-items%3A%20center%3B%0A%20%20justify-content%3A%20center%3B%0A%20%20color%3A%20%23fff%3B%0A%7D%0A%0A.konsept-tp-arrows.tparrows%3Ahover%20%7B%0A%20%20background%3A%20none%20%0A%7D%0A%0A.konsept-tp-arrows.tp-rightarrow%20svg%20%7B%0A%20%20transform%3A%20scaleX%28-1%29%0A%7D%0A%0A.konsept-tp-arrows%20svg%20path%20%7B%0A%20%20stroke-width%3A%20.8px%3B%0A%7D%0A%0A.konsept-tp-arrows%20svg%20path%3Anth-child%281%29%20%7B%0A%09%20stroke-dasharray%3A%2040%3B%0A%09%20stroke-dashoffset%3A%2040%3B%0A%09%20transform%3A%20scaleY%28-1%29%3B%0A%09%20transform-origin%3A%20center%3B%0A%09%20transition%3A%200.6s%20cubic-bezier%280.49%2C%200.48%2C%201%2C%201%29%3B%0A%7D%0A.konsept-tp-arrows%20svg%20path%3Anth-child%282%29%20%7B%0A%09%20stroke-dasharray%3A%2040%3B%0A%09%20stroke-dashoffset%3A%200%3B%0A%09%20transition%3A%200.6s%200.3s%20cubic-bezier%280.49%2C%200.64%2C%201%2C%201%29%3B%0A%7D%0A%0A.konsept-tp-arrows%3Ahover%20svg%20path%3Anth-child%281%29%20%7B%0A%09%20stroke-dashoffset%3A%200%3B%0A%09%20transition%3A%200.6s%200.3s%20cubic-bezier%280.49%2C%200.64%2C%201%2C%201%29%3B%0A%7D%0A.konsept-tp-arrows%3Ahover%20svg%20path%3Anth-child%282%29%20%7B%0A%09%20stroke-dashoffset%3A%2040%3B%0A%09%20transition%3A%200.6s%20cubic-bezier%280.49%2C%200.48%2C%201%2C%201%29%3B%0A%7D%0A.tp-bullet%20%7B%0A%20%20display%3A%20inline-flex%3B%0A%20%20width%3A%2040px%3B%0A%20%20height%3A%2040px%3B%0A%20%20align-items%3A%20center%3B%0A%20%20justify-content%3A%20center%3B%0A%20%20background-color%3A%20transparent%3B%0A%20%20opacity%3A%201%3B%0A%20%20position%3A%20relative%3B%0A%20%20margin%3A%200%204px%3B%0A%7D%0A%09%09%0A.tp-bullet%3Aafter%20%7B%0A%20%20content%3A%20%27%27%3B%0A%20%20display%3A%20block%3B%0A%20%20width%3A%206px%3B%0A%20%20height%3A%206px%3B%0A%20%20transform%3A%20rotate%2845deg%29%3B%0A%20%20background-color%3A%20%23fff%3B%20%20%0A%20%20transition%3A%20background-color%200.3s%20ease%3B%0A%7D%0A%09%0A.tp-bullet.selected%2C%0A.tp-bullet%3Ahover%20%7B%0A%20%20border-color%3A%20%23fff%3B%0A%20%20background-color%3A%20transparent%3B%0A%7D%0A%09%09%0A.tp-bullet.selected%3Aafter%2C%0A.tp-bullet%3Ahover%3Aafter%20%7B%0A%20%20background-color%3A%20%23fff%3B%0A%7D%0A%0A.tp-bullet%20.qodef-svg-circle%20%7B%0A%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20display%3A%20block%3B%0A%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20top%3A%200%3B%0A%20%20%20%20left%3A%200%3B%0A%20%20%20%20z-index%3A%201%3B%0A%20%20%20%20fill%3A%20none%3B%0A%20%20%20%20color%3A%20currentColor%3B%0A%20%20%20%20stroke%3A%20%23fff%3B%0A%20%20%20%20-webkit-transition%3A%20all%20.8s%20cubic-bezier%280.14%2C%200.57%2C%200.14%2C%201.03%29%3B%0A%20%20%20%20-o-transition%3A%20all%20.8s%20cubic-bezier%280.14%2C%200.57%2C%200.14%2C%201.03%29%3B%0A%20%20%20%20transition%3A%20all%20.8s%20cubic-bezier%280.14%2C%200.57%2C%200.14%2C%201.03%29%3B%0A%7D%0A%0A%20.tp-bullet%20.qodef-svg-circle%20circle%20%7B%0A%20%20%20%20stroke-dasharray%3A%20160%3B%0A%20%20%20%20stroke-dashoffset%3A%20160%3B%0A%20%20%20%20stroke-width%3A%201%3B%0A%20%20%20%20-webkit-transition%3A%20all%20.8s%20cubic-bezier%28.45%2C0%2C.14%2C1.03%29%3B%0A%20%20%20%20-o-transition%3A%20all%20.8s%20cubic-bezier%28.45%2C0%2C.14%2C1.03%29%3B%0A%20%20%20%20transition%3A%20all%20.8s%20cubic-bezier%28.45%2C0%2C.14%2C1.03%29%3B%0A%09transform%3A%20rotate%28-145deg%29%3B%0A%09transform-origin%3A%20center%3B%0A%7D%0A%0A.qodef-browser--ms-explorer%20.tp-bullet%20.eltdf-svg-circle%20circle%20%7B%0A%20%20opacity%3A%200%3B%0A%7D%0A%0A.tp-bullet%3Ahover%20.qodef-svg-circle%20circle%2C%0A.tp-bullet.selected%20.qodef-svg-circle%20circle%20%7B%0A%20%20%20%20stroke-dashoffset%3A%2010%3B%0A%20%20%09transform%3A%20rotate%2855deg%29%3B%0A%20%20%20%20-webkit-transition%3A%20all%201s%20cubic-bezier%280.43%2C%200.41%2C%200.36%2C%200.9%29%3B%0A%20%20%20%20-o-transition%3A%20all%201s%20cubic-bezier%280.43%2C%200.41%2C%200.36%2C%200.9%29%3B%0A%20%20%20%20transition%3A%20all%201s%20cubic-bezier%280.43%2C%200.41%2C%200.36%2C%200.9%29%3B%0A%7D%0A%0A.qodef-browser--ms-explorer%20.tp-bullet%3Ahover%20.qodef-svg-circle%20circle%2C%0A.qodef-browser--ms-explorer%20.tp-bullet.selected%20.qodef-svg-circle%20circle%20%7B%0A%20%20opacity%3A%201%3B%0A%7D%0A");
+                                                                            var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+                                                                            if (htmlDiv) {
+                                                                                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+                                                                            } else {
+                                                                                var htmlDiv = document.createElement('div');
+                                                                                htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+                                                                                document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+                                                                            }
+                                                                        </script>
+                                                                        <script>
+                                                                            var htmlDivCss = unescape("%0A%0A%0A%0A%0A%0A");
+                                                                            var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+                                                                            if (htmlDiv) {
+                                                                                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+                                                                            } else {
+                                                                                var htmlDiv = document.createElement('div');
+                                                                                htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+                                                                                document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+                                                                            }
+                                                                        </script>
+                                                                    </rs-module-wrap>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="~/Content/img/@Model.foto" alt="">
-            <div class="product-item-description d-flex ml-auto">
-                <div class="bg-faded p-5 rounded">
-                    @Html.Raw(Model.icerik)
-                </div>
-            </div>
-        </div>
+        </main>
     </div>
-</section>
+</div>
 
